@@ -1,0 +1,3143 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script&display=swap&subset=cyrillic')
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic')
+
+// Переменные color background block
+$color_r: #E75D5D
+$color_y: #F1A733
+$color_g: #5EB28F
+$color_f: #6666CC
+$color_b: #008DD2
+$color_n: #ab5c49
+$color_focus: #AB5C49
+
+
+// Переменные color background section
+$color_bgs1: #f1f1f1
+$color_bgs2: #f9f8f4
+
+$color_title: #E75D5D
+$color_bb: #F5F5F5
+$color_tb: #222222
+
+body
+  font-family: var(--main-font)
+  font-size: var(--responsive)
+  font-weight: 400
+  --max-font: 18
+  --min-font: 15
+  margin: 0
+  padding: 0
+  color: $color_tb
+  background-color: $color_bb
+
+h1,h2,h3,h4,h5,h6
+  font-family: var(--h-font)
+  font-size: var(--responsive)
+  color: $color_r
+  text-transform: none
+  line-height: normal
+
+figure.alignnone.entry-thumb
+  margin: 0 auto
+
+iframe
+    display: block
+    max-width: 560px
+    text-align: center
+    margin: 1rem auto
+*
+  outline: none
+.center
+  text-align: center
+.hidden
+  display: none
+.nocolor
+  background: none!important
+.no-margin-top
+  margin-top: 0!important
+.no-margin-bottom
+  margin-bottom: 0!important
+
+.container
+  display: grid
+  max-width: 1160px
+  justify-items: center
+  align-items: center
+  margin: 0 auto
+  padding: 0 15px
+.container2
+  display: grid
+  max-width: 1400px
+  justify-items: center
+  align-items: center
+  margin: 0 auto
+  padding: 0 15px
+.container3
+  display: grid
+  width: 100%
+  max-width: 1220px
+  justify-items: center
+  align-items: center
+  margin: 0 auto
+.btn
+  cursor: pointer
+  display: inline-block
+  font-weight: 400
+  text-align: center
+  vertical-align: middle
+  line-height: 1.5
+  border-radius: 0.25rem
+  text-decoration: none
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+
+.btn_center
+  display: block
+  margin: 0 auto
+
+  &.active
+    outline: 0
+    background-image: none
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+
+.btn_default
+  background-color: $color_r
+  color: #fff
+  font-size: inherit
+  padding: 13px 15px
+  border-color: inherit
+
+.btn_default
+  &:hover,
+  &:focus,
+  &:active
+    color: #fff
+    background-color: $color_y
+    border-color: $color_y
+    cursor: pointer
+
+.btn_signup
+  background-color: $color_g
+  color: #fff
+  font-size: inherit
+  padding: 13px 20px
+  border: 0
+
+.btn_signup
+  &:hover,
+  &:focus,
+  &:active
+    color: #fff
+    background-color: $color_y
+    border-color: $color_y
+
+
+.btn-more
+  border: #f5b9b9 1px solid
+  text-transform: uppercase
+  transition: all 300ms ease-in-out 0ms
+  width: 200px !important
+
+.btn.read_more
+  font-family: var(--h-font)
+  font-size: 15px
+  letter-spacing: 1.25px
+  background-image: url(../img/icon/i_more_white.svg)
+  background-size: 24px
+  background-position: calc(100% - 17px) center
+  background-repeat: no-repeat
+  padding: 15px 50px 15px 20px
+  text-transform: uppercase
+
+  &:hover,
+  &:focus,
+  &:active
+    background-image: url("../img/icon/i_more_white.svg")
+
+
+
+.send_button
+  font-family: var(--h-font)
+  font-size: 15px
+  background-image: url(../img/icon/i_send_white.svg)
+  background-size: 34px
+  background-position: calc(100% - 15px) center
+  background-repeat: no-repeat
+  padding: 15px 50px 15px 20px
+  text-transform: uppercase
+  color: #fff
+  background-color: $color_r
+  border-color: $color_r
+  font-weight: 600
+  transition: all 300ms ease-in-out 0ms
+
+.send_button
+  &:hover,
+  &:focus,
+  &:active
+    color: #fff
+    background-color: darken($color_r, 10%)
+    border-color: darken($color_r, 10%)
+
+    //background-color: $color_y
+    //border-color: $color_y
+
+//.send_button
+  &:focus,
+  &:active,
+  &:active:hover,
+  &:active:focus,
+  &:active.focus,
+  &.active:hover,
+  &.active:focus,
+  &.active.focus
+    background-color: $color_focus
+    border-color: $color_focus
+    filter: brightness(85%)
+
+.b_send_button
+  font-family: var(--h-font)
+  font-size: 15px
+  letter-spacing: 1.5px
+  background-image: url(../img/icon/i_send_white.svg)
+  background-position: calc(100% - 15px) center
+  background-repeat: no-repeat
+  background-size: 34px
+  padding: 15px 50px 15px 20px
+  text-transform: uppercase
+  color: #fff
+  background-color: $color_r
+  border-color: $color_r
+  font-weight: bold
+  transition: all 300ms ease-in-out 0ms
+
+.b_send_button
+  &:hover
+    color: #fff
+    background-color: darken($color_r, 10%)
+    border-color: darken($color_r, 10%)
+
+.b_send_button
+  &:hover,
+  &:focus,
+  &:active
+    background-image: url("../img/icon/i_send_white.svg")
+    color: #fff
+
+.b_send_button
+  &:focus,
+  &:active,
+  &:active:hover,
+  &:active:focus,
+  &:active.focus,
+  &.active:hover,
+  &.active:focus,
+  &.active.focus
+    background-color: darken($color_r, 20%)
+    border-color: darken($color_r, 20%)
+.pt0
+  padding: 0!important
+.mt0
+  margin: 0!important
+
+header
+  .nav_block
+    display: grid
+    &_top
+      .inner
+        height: 50px
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        align-items: center
+        justify-self: right
+        grid-gap: 1em
+        .header_text
+          display: grid
+          grid-row: 1/1
+          grid-column: 1/3
+          justify-items: center
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+          grid-gap: 1em
+          &_tel
+            grid-row: 1/1
+            .icon
+              background: url(../img/icon/i_tell_home.svg) no-repeat left center
+              background-size: 20px
+              font-family: var(--main-font)
+              padding-left: 25px
+              a
+                color: #000
+                text-decoration: none
+                transition: color 300ms ease 0ms
+          &_whatsapp
+            grid-row: 1/1
+            .icon
+              background: url(../img/icon/i_whatsapp.svg) no-repeat left center
+              background-size: 22px
+              font-family: var(--main-font)
+              padding-left: 25px
+              a
+                color: #000
+                text-decoration: none
+                transition: color 300ms ease 0ms
+          &_address
+            grid-row: 1/1
+            .icon
+              background: url(../img/icon/i_address.svg) no-repeat left center
+              background-size: 22px
+              font-family: var(--main-font)
+              padding-left: 25px
+              a
+                color: #000
+                text-decoration: none
+                transition: color 300ms ease 0ms
+                border-bottom: 1px dashed currentColor
+                &:hover
+                  border-bottom: 1px solid $color_r
+          &_text
+            grid-row: 1/1
+            .icon
+              font-family: var(--main-font)
+
+
+
+        .header_social
+          display: grid
+          grid-template-columns: 1fr 1fr 1fr 1fr
+          grid-column: 3/4
+          grid-gap: 0.1em
+          grid-row: 1/1
+          justify-self: end
+          &_vk
+            background: url(../img/icon/i_vk_nobg.svg) no-repeat center
+            background-size: 24px
+            width: 40px
+            height: 40px
+            vertical-align: middle
+            font-size: 0
+            &:hover
+              background: url(../img/icon/i_vk_nobg_hover.svg) no-repeat center
+              background-size: 24px
+              background-color: #597ba0
+
+          &_fb
+            background: url(../img/icon/i_facebook_nobg.svg) no-repeat center
+            background-size: 14px
+            width: 40px
+            height: 40px
+            vertical-align: middle
+            font-size: 0
+            &:hover
+              background: url(../img/icon/i_facebook_nobg_hover.svg) no-repeat center
+              background-size: 14px
+              background-color: #4267b2
+          &_tw
+            background: url(../img/icon/i_twitter_nobg.svg) no-repeat center
+            background-size: 24px
+            width: 40px
+            height: 40px
+            vertical-align: middle
+            font-size: 0
+            &:hover
+              background: url(../img/icon/i_twitter_nobg_hover.svg) no-repeat center
+              background-size: 24px
+              background-color: #1da1f2
+          &_insta
+            background: url(../img/icon/i_instagram_nobg.svg) no-repeat center
+            background-size: 24px
+            width: 40px
+            height: 40px
+            vertical-align: middle
+            font-size: 0
+            &:hover
+              background: url(../img/icon/i_instagram_nobg_hover.svg) no-repeat center
+              background-size: 24px
+              background-color: #b900b4
+    &_line
+      .inner
+        display: grid
+        grid-template-areas: "logo nav send"
+        align-items: center
+        grid-gap: 1em
+        width: 100%
+        &_logo
+          grid-area: logo
+          justify-self: start
+          filter: grayscale(20%)
+          opacity: 0.85
+          top: -50px
+          position: relative
+          margin-bottom: -40px
+          margin-top: 10px
+          img
+            width: 100%
+        &_toogle
+          display: none
+        &_send
+          grid-area: send
+          justify-self: end
+        &_navul
+          grid-area: nav
+          z-index: 1015
+          justify-self: center
+          .close
+            display: none
+          &>ul
+            list-style: none
+            margin: 0
+            padding: 0
+            &>li
+              display: inline-grid
+              &>a
+                  line-height: normal
+                  background-color: $color_f
+                  padding: 10px 15px
+                  text-transform: uppercase
+                  text-decoration: none
+                  transition: all 300ms ease-in-out 0ms
+                  font-family: var(--h-font)
+                  font-weight: bold
+                  color: #fff
+                  font-size: 16px
+                  letter-spacing: normal
+                  margin: 5px
+                  border-radius: 0.25rem
+                  &:hover
+                    text-decoration: none
+                    color: #fff
+                    background-color: $color_r
+                  &:active,
+                  &:focus
+                    color: #fff
+                    background-color: $color_r
+                    filter: brightness(85%)
+
+
+  // NAV BLOCK 2
+  .navtop
+    display: grid
+    grid-template-columns: auto
+    justify-content: space-evenly
+    align-content: center
+    align-items: center
+    grid-gap: 1em
+    padding: 20px 15px
+    .logo
+      grid-area: logo
+      grid-column: 1/2
+      grid-row: 1/2
+      max-width: 200px
+      img
+        width: 100%
+      a
+        display: block
+        img
+          width: 100%
+    .nav
+      grid-area: nav
+      grid-column: 2/3
+      grid-row: 1/2
+      .inner_toogle
+        display: none
+      .close
+        display: none
+      .navul
+        ul
+          list-style: none
+          margin: 0
+          padding: 0
+          &>li
+            display: inline-block
+            margin: auto 10px
+            &>a
+              text-decoration: none
+              font-size: 18px
+              color: #444
+              &:hover
+                border-bottom: 2.5px dashed $color_r
+                color: #000
+              &:active,
+              &:focus
+                border-bottom: 2.5px dashed $color_r
+
+    .address
+      grid-area: address
+      grid-column: 4/5
+      grid-row: 1/2
+      .icon_text
+        font-size: small
+        text-align: right
+      .icon_address
+        border: 2px solid $color_r
+        padding: 8px 10px
+        margin: 8px 0
+        border-radius: 0.25rem
+        a
+          text-decoration: none
+          color: $color_r
+          font-weight: 600
+          font-size: 14px
+          display: block
+          transition: all .2s linear
+          &::before
+            content: " "
+            background: url(../img/icon/i_address.svg) no-repeat left center
+            background-size: 20px
+            font-family: var(--main-font)
+            padding-left: 25px
+        &:hover
+          transition: all .2s linear
+          background-color: #fff
+          border: 2px solid darken($color_r, 10%)
+          a
+            color: darken($color_r, 10%)
+
+    .social
+      grid-area: social
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-column: 3/4
+      grid-row: 1/2
+      justify-self: end
+      &_vk, &_fb, &_tw, &_insta
+        width: 30px
+        height: 30px
+        vertical-align: middle
+        font-size: 0
+        margin-right: 2px
+      &_vk
+        background: url(../img/icon/i_vk_nobg.svg) no-repeat center
+        background-size: 24px
+        &:hover
+          background: url(../img/icon/i_vk_nobg_hover.svg) no-repeat center
+          background-size: 24px
+          background-color: #597ba0
+
+      &_fb
+        background: url(../img/icon/i_facebook_nobg.svg) no-repeat center
+        background-size: 14px
+        &:hover
+          background: url(../img/icon/i_facebook_nobg_hover.svg) no-repeat center
+          background-size: 14px
+          background-color: #4267b2
+      &_tw
+        background: url(../img/icon/i_twitter_nobg.svg) no-repeat center
+        background-size: 24px
+        &:hover
+          background: url(../img/icon/i_twitter_nobg_hover.svg) no-repeat center
+          background-size: 24px
+          background-color: #1da1f2
+      &_insta
+        background: url(../img/icon/i_instagram_nobg.svg) no-repeat center
+        background-size: 24px
+        &:hover
+          background: url(../img/icon/i_instagram_nobg_hover.svg) no-repeat center
+          background-size: 24px
+          background-color: #b900b4
+
+
+
+  .banner2
+    grid-area: banner
+    background: #ffd527 url(../img/bg/malchik3.jpg) no-repeat center top
+    background-size: cover
+    min-height: 1000px
+    position: relative
+    .container
+      grid-template-areas: "banner"
+      .form_header
+        width: 100%
+      .b_text
+        display: grid
+        grid-row-gap: 1em
+        text-shadow: 1px 0 2px rgba(0,0,0,0.15)
+        align-items: center
+        align-content: center
+        position: absolute
+        top: 30%
+        left: 20%
+        bottom: 50%
+        &_title
+          justify-self: left
+          color: #000
+          font-weight: 400
+          padding: 0
+          margin: 0
+          line-height: normal
+          font-size: var(--responsive)
+          --max-font: 24
+          --min-font: 18
+          span
+            font-weight: 700
+        &_subtitle
+          padding: 0
+          margin: 0
+          justify-self: left
+          line-height: 1.1
+          color: #000
+          font-size: var(--responsive)
+          --max-font: 42
+          --min-font: 30
+        &_slogan
+          justify-self: left
+          line-height: normal
+          font-family: var(--h-font)
+          font-weight: 400
+          display: grid
+          color: #000
+          font-size: var(--responsive)
+          --max-font: 24
+          --min-font: 18
+        &_link
+          margin: 1em 0
+
+
+
+  .banner
+    grid-area: banner
+    background: #c1dfea url(../img/bg/bg4.jpg) no-repeat center top
+    background-size: cover
+    min-height: 710px
+    .container
+      grid-template-areas: "banner"
+      .form_header
+        width: 100%
+      .b_text
+        background: url(../img/svg/um_006.svg) no-repeat center right
+        background-size: 400px
+        margin-top: 50px
+        padding-bottom: 220px
+        padding-top: 50px
+        display: grid
+        text-shadow: 2px 0 5px rgba(0, 0, 0, 0.35)
+        width: 100%
+        &_title
+          justify-self: left
+          background: rgba(255,255,255,0.7)
+          border-radius: 0.25rem
+          padding: 25px
+          margin: 5px
+          line-height: normal
+        &_subtitle
+          background: rgba(255,255,255,0.7)
+          border-radius: 0.25rem
+          padding: 25px
+          margin: 5px
+          justify-self: left
+          line-height: normal
+
+        &_slogan
+          background: rgba(255,255,255,0.7)
+          border-radius: 0.25rem
+          padding: 30px
+          margin: 80px 5px 5px 5px
+          justify-self: left
+          line-height: normal
+          font-family: var(--h-font)
+          font-size: calc(var(--max-font) * 1px)
+          display: grid
+          text-shadow: 2px 0 5px rgba(0,0,0,0.35)
+          color: $color_b
+          font-weight: 600
+        h1
+          .h11
+            color: $color_r
+          .h12
+            color: $color_f
+          .h13
+            color: $color_r
+        h2
+          .h11
+            color: $color_f
+          .h12
+            color: $color_r
+          .h13
+            color: $color_b
+
+
+
+    .inlineform
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-gap: 8px
+      margin: 0 0 60px 0
+      .form-control
+        height: 40px
+        font-family: var(--main-font)
+        font-size: 17px
+        color: #454545
+        border-radius: 0
+        background: #fff
+        padding: 6px 20px
+        box-shadow: none
+        transition: all 300ms ease-in-out 0ms
+        background-color: rgba(255,255,255,0.8)
+        border-color: rgba(255,255,255,0.8)
+        border: 1px solid #ccc
+        outline: 0
+        vertical-align: bottom
+        &:hover
+          border-color: $color_r
+  .breadcrumbs_m
+    border-top: 1px solid #dadada
+    border-bottom: 1px solid #dadada
+    .breadcrumbs
+      justify-self: start
+      font-size: 15px
+      margin: 20px 0.5em
+      a
+        color: #454545
+        text-decoration: none
+        transition: color 300ms ease 0ms
+      .sep
+        margin: 0 10px
+
+#map_2gis
+  width: 100%
+  height: 600px
+#section1
+  padding: 70px 0
+  .bks
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    width: 100%
+    grid-gap: 1em
+    margin-top: 30px
+    &>a.bks_item
+        display: grid
+        margin-bottom: 15px
+        text-align: center
+        transition: border-color 300ms ease-in-out 0ms
+        box-shadow: 0 5px 20px 2px rgba(0,0,0,.15)
+        border-radius: 0.25rem
+        color: #fff
+        text-decoration: none
+        transition: color 300ms ease 0ms
+        h3
+          color: #fff
+          margin: 0
+          line-height: 1.25
+          span
+            display: block
+    .bks_item
+      &_header
+        &_img
+          margin-bottom: 1em
+          overflow: hidden
+          img
+            width: 100%
+            border-radius: .25rem .25rem 0 0
+            transition: all 0.2s ease-in-out
+        &_name
+          line-height: 1.2
+          margin-bottom: 1.2em
+          text-transform: uppercase
+      &:nth-child(1)
+        background: $color_y
+        border: 4px solid $color_y
+        transition: all 0.2s ease-in-out
+        &:hover
+          border: 8px solid $color_y
+          img
+            transform: scale(1.1)
+            filter: brightness(85%)
+      &:nth-child(2)
+        background: $color_g
+        border: 4px solid $color_g
+        transition: all 0.2s ease-in-out
+        &:hover
+          border: 8px solid $color_g
+          img
+            transform: scale(1.1)
+            filter: brightness(85%)
+      &:nth-child(3)
+        background: $color_b
+        border: 4px solid $color_b
+        transition: all 0.2s ease-in-out
+        &:hover
+          border: 8px solid $color_b
+          img
+            transform: scale(1.1)
+            filter: brightness(85%)
+      &:nth-child(4)
+        background: $color_f
+        border: 4px solid $color_f
+        transition: all 0.2s ease-in-out
+        &:hover
+          border: 8px solid $color_f
+          img
+            transform: scale(1.1)
+            filter: brightness(85%)
+#section2
+  background: linear-gradient( #fdf7e333, #fff9e461 ), url(../img/bg/bg1.jpg) repeat 0 0
+  padding: 40px 0
+  background-color: $color_bgs2
+  background-size: cover
+  .about_block
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    width: 100%
+    grid-gap: 1em
+    &_text
+      width: 100%
+      margin: 0 auto
+      max-width: 890px
+      &_item
+        filter: grayscale(50%)
+    &_img
+      img
+        width: 100%
+#section3
+  background: url(../img/bg/bg5.png) repeat 0 0
+  padding: 70px 0
+  .title
+    line-height: normal
+    margin-bottom: 0
+    text-align: center
+    text-transform: uppercase
+    &>h2
+      margin-top: 0
+  .more_link
+    border: 1px solid #e75d5d
+    border-radius: 0.25rem
+    padding: 0 1rem
+    margin: 2em 0 1em
+    a
+      text-decoration: none
+      color: #E75D5D
+      display: block
+      background: url(../img/icon/i_more_link_focus.svg) no-repeat
+      background-size: 20px
+      background-position: left 50%
+      padding: 1rem
+      width: 100%
+      text-align: center
+      &:hover
+        text-decoration: underline
+
+  .b_rew
+    display: grid
+    width: 100%
+    grid-gap: 1em
+    .owl-item
+      .b_rew_item
+        padding: 15px
+        background: url(../img/bg/bg_paper.png) repeat top center
+        background-position-y: 10px
+        border-radius: 2%
+        &_info
+          float: left
+          width: 25%
+        &_text
+          padding: 15px 15px 15px 0
+          font-family: 'Bad Script', cursive
+          color: #1d34a2
+          font-size: 1.25rem
+          line-height: 1.5
+          font-weight: bold
+          &>blockquote
+            margin: 0
+            padding: 0
+            &::before
+              display: block
+              content: ' '
+              background-size: 24px
+              background-repeat: no-repeat
+              height: 24px
+              background-position: left
+
+            &>footer
+              padding: 0
+              background: none
+              &>cite
+                font-style: italic
+                font-weight: bold
+                font-size: 85%
+
+      &:nth-child(1n)
+        .b_rew_item
+          border: 2px dotted $color_y
+        .b_rew_item_text
+          &>blockquote
+            &::before
+                background-image: url(../img/icon/quote_l_1.svg)
+
+      &:nth-child(2n)
+        .b_rew_item
+          border: 2px dotted $color_g
+        .b_rew_item_text
+          &>blockquote
+            &::before
+                background-image: url(../img/icon/quote_l_2.svg)
+
+      &:nth-child(3n)
+        .b_rew_item
+          border: 2px dotted $color_b
+        .b_rew_item_text
+          &>blockquote
+            &::before
+                background-image: url(../img/icon/quote_l_3.svg)
+#section4
+  min-height: 800px
+  color: #fff
+  background: #d1cecd url(../img/bg/bg_form_1.jpg) no-repeat center top
+  background-size: cover
+  padding: 70px 0
+  margin: 70px 0 0 0
+
+  .container
+    max-width: 1000px
+  .title
+    text-align: center
+    h2
+      --max-font: 33
+      line-height: 1.15
+      text-transform: uppercase
+      color: #fff
+  .subtitle
+    h3
+      font-family: "pf_beausans_prothin",sans-serif
+      --max-font: 25
+      text-transform: uppercase
+      line-height: 1.25
+      margin: 0 0 30px 0
+      font-weight: normal
+      color: #fff
+      text-align: center
+
+  .form_body
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr))
+    grid-gap: 4px
+    margin: 25px 0
+    width: 100%
+    &_left
+      display: grid
+      grid-template-columns: 1fr
+      grid-gap: 3px
+    &_right
+      display: grid
+      grid-template-columns: 1fr
+      grid-gap: 3px
+      align-items: center
+      .form_field
+    .form_field_doc
+      font-size: 18px
+      text-transform: uppercase
+      font-weight: bold
+      font-family: var(--h-font)
+      align-self: center
+      position: relative
+      label
+        display: block
+        font-family: var(--h-font)
+        color: #fff
+        background: url(../img/icon/ico_attachment_white.png)
+        background-repeat: no-repeat
+        background-position: left top
+        padding-left: 35px
+        text-transform: uppercase
+        cursor: pointer
+      select
+        display: block
+        width: 100%
+        padding: 1rem
+        border: 1px solid #ccc
+        border-radius: 0.125rem
+        font-size: inherit
+        background: #d6d7da url(../img/icon/i_down.svg) no-repeat center right
+        background-size: 24px
+        background-origin: content-box
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        cursor: pointer
+
+
+  input.form-control
+    height: 40px
+    font-family: var(--main-font)
+    font-size: 19px
+    color: #454545
+    border-radius: 0
+    background: #fff
+    padding: 6px 20px
+    box-shadow: none
+    transition: all 300ms ease-in-out 0ms
+    background-color: rgba(255, 255, 255, 0.8)
+    border-color: rgba(255, 255, 255, 0.8)
+    border: 1px solid #ccc
+    outline: 0
+    vertical-align: bottom
+    &:hover
+      border-color: $color_r
+    &::placeholder
+      color: #999
+
+  textarea.form-control
+    height: 157px
+    background-color: rgba(255,255,255,0.8)
+    border-color: rgba(255,255,255,0.8)
+    font-size: 19px
+    color: #454545
+    border-radius: 0
+    padding: 6px 20px
+    box-shadow: none !important
+    transition: all 300ms ease-in-out 0ms
+    outline: 0
+    &:hover
+      border-color: $color_r
+
+  .form_footer
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr))
+    grid-row-gap: 20px
+    grid-column-gap: 10px
+    margin-bottom: 15px
+    width: 100%
+    justify-items: left
+
+
+    input[type="submit"]:disabled
+      opacity: .5
+    input[type="checkbox"]
+      width: 20px
+      height: 20px
+
+    .form_field_doc
+      label
+        color: #ccc
+      a
+        color: #ccc
+        &:hover
+          text-decoration: none
+
+
+  .form_chekbox
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+    width: 100%
+    grid-gap: 2em
+    margin: 20px 0
+
+    &_item
+      font-size: 19px
+      line-height: 1
+      margin: 0
+      padding: 5px 0 0 45px
+      position: relative
+
+      label
+        font-weight: normal
+
+      .checkbox label
+        font-size: 19px
+        line-height: 1
+        margin: 0
+        padding: 5px 0 0 45px
+        position: relative
+
+      [type="checkbox"]
+        display: none
+        width: 20px
+        height: 20px
+
+      .checkbox_custom
+          width: 31px
+          height: 31px
+          border: 1px solid #dadada
+          margin-right: 15px
+          position: absolute
+          top: 0
+          left: 0
+
+      .checkbox_custom
+          border-color: #fff
+
+      [type="checkbox"]:checked+.checkbox_custom::before
+          content: ''
+          display: block
+          position: absolute
+
+      [type="checkbox"]:checked+.checkbox_custom::before
+          width: 16px
+          height: 8px
+          border-color: #454545
+          border-left: 3px solid
+          border-bottom: 3px solid
+          top: 8px
+          left: 7px
+          transform: rotate(-50deg)
+
+      [type="checkbox"]:checked+.checkbox_custom::before
+          border-color: #fff
+
+
+#section5
+  max-width: 960px
+  margin: 0 auto
+  padding: 0 0 50px 0
+  h1
+    margin-bottom: 0.5em
+#section6
+  background: url(../img/bg/bg_pattern2.jpg) repeat 0 0
+  padding: 50px 0 35px 0
+
+  form.inlineform
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-gap: 5px
+    margin: 0 0 20px 0
+    .form-control
+      height: 40px
+      font-family: var(--main-font)
+      font-size: 19px
+      color: #454545
+      border-radius: 0
+      background: #fff
+      padding: 6px 20px
+      box-shadow: none
+      transition: all 300ms ease-in-out 0ms
+      background-color: rgba(255,255,255,0.8)
+      border-color: rgba(255,255,255,0.8)
+      border: 1px solid #ccc
+      outline: 0
+      vertical-align: bottom
+      &:hover
+        border-color: $color_r
+#section7
+  padding: 70px 0
+  .title
+    padding: 0
+    margin: 0 0 0.35em 0
+    text-transform: uppercase
+    text-align: center
+  .subtitle
+    padding: 0
+    margin: 0 0 1em 0
+    font-family: "pf_beausans_prothin",sans-serif
+    --max-font: 23
+    text-transform: uppercase
+    line-height: 1
+    font-weight: normal
+    text-align: center
+
+  .bkart
+    display: grid
+    //grid-template-columns: repeat(4, 1fr)
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    width: 100%
+    grid-gap: 1.25em
+
+
+    a.bkart_item
+      display: grid
+      padding: 1em
+      text-decoration: none
+      color: initial
+      &:nth-child(2n+1)
+        background-color: #FFFFF0
+      &:nth-child(2n)
+        background-color: #F8F8FF
+
+    .bkart_item
+      &_thumb
+        margin: 0 0 1em 0
+        filter: grayscale(100%)
+        transition: 0.3s
+        &:hover,
+        &:focus,
+        &:active
+          filter: grayscale(0)
+      &_link
+        align-self: end
+      img
+        max-height: 250px
+        width: 100%
+
+      &:nth-child(even)
+        .bkart_item_thumb
+          filter: grayscale(0)
+          &:hover,
+          &:focus,
+          &:active
+            filter: grayscale(100%)
+      &_info
+        margin: 0 0 1em 0
+        font-size: 0.75em
+        color: #454545
+        span.parent
+          border-right: 1px solid #dadada
+          padding: 0 0.5em
+        span.date
+          border-right: 1px solid #dadada
+          padding-right: 0.5em
+        span.author
+          padding: 0 0.5em
+      &_content
+        &_title
+          font-family: var(--h-font)
+          font-size: var(--responsive)
+          line-height: 1.15
+          margin-bottom: 15px
+          color: $color_r
+          --max-font: 28
+          --min-font: 26
+          &:hover
+            color: $color_r
+          &:focus,
+          &:active
+            color: #610812
+        &_desc
+          margin: 0 0 1em 0
+    .rows.bkart
+      margin-bottom: 60px
+
+.blok_list
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+  width: 100%
+  grid-gap: 1.5em
+  justify-items: center
+  margin: 0 auto 60px
+  .k_list
+    border: 4px dotted #EF7F1A
+    padding: 20px
+    min-width: 275px
+    border-radius: 5%
+    .item_content
+      a
+        color: #000
+        text-decoration: none
+        transition: color 300ms ease 0ms
+        &:hover
+          color: $color_r
+          text-decoration: underline
+        &:focus,
+        &:active
+          color: #610812
+          text-decoration: underline
+    &_addr
+      margin-bottom: 0
+      .item_content
+        background: url(../img/icon/i_address.svg) no-repeat left center
+        background-size: 22px
+        background-position-y: 10px
+        font-family: var(--main-font)
+        padding-left: 30px
+        padding-top: 10px
+    &_map
+      margin-bottom: 15px
+      .item_content
+        background: url(../img/icon/i_map_url.svg) no-repeat left center
+        background-size: 22px
+        background-position-y: 10px
+        font-family: var(--main-font)
+        padding-left: 30px
+        padding-top: 10px
+        a
+          color: $color_r
+          text-decoration: none
+          transition: color 300ms ease 0ms
+          &:hover
+            color: $color_r
+            text-decoration: underline
+          &:focus,
+          &:active
+            color: #610812
+            text-decoration: underline
+    &_tel
+      margin-bottom: 10px
+      &_content
+        font-family: var(--main-font)
+        margin-bottom: 15px
+        padding-left: 30px
+        a
+          color: #000
+          text-decoration: none
+          transition: color 300ms ease 0ms
+        &.home
+          background: url(../img/icon/i_tell_home.svg) no-repeat left center
+          background-size: 20px
+        &.mob
+          background: url(../img/icon/i_tell.svg) no-repeat left center
+          background-size: 20px
+
+    &_whatsapp
+      margin-bottom: 15px
+      .item_content
+        background: url(../img/icon/i_whatsapp.svg) no-repeat left center
+        background-size: 22px
+        font-family: var(--main-font)
+        padding-left: 30px
+        a
+          color: #000
+          text-decoration: none
+          transition: color 300ms ease 0ms
+    &_email
+      margin-bottom: 15px
+      .item_content
+        background: url(../img/icon/i_email.svg) no-repeat left center
+        background-size: 20px
+        font-family: var(--main-font)
+
+        padding-left: 30px
+        a
+          color: #000
+          text-decoration: none
+          transition: color 300ms ease 0ms
+#section9
+  padding: 70px 0
+  .container
+    h2.subtitle.h3
+      --max-font: 25
+      text-transform: uppercase
+      line-height: 1
+      margin: -15px auto 40px
+      font-weight: normal
+      text-align: center
+  .bks
+    display: grid
+    //grid-template-columns: repeat(4, 1fr)
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    width: 100%
+    grid-gap: 1em
+    &_item
+      display: grid
+      margin-bottom: 15px
+      text-align: center
+      transition: border-color 300ms ease-in-out 0ms
+      border-radius: 15px
+      border: 4px dotted #EF7F1A
+      &:hover
+        border-color: $color_r
+      &_img
+        margin-bottom: 15px
+        &>a
+          &>img
+            width: 100%
+            border-radius: 15px 15px 0 0
+      &_name
+        line-height: 1.2
+        margin-bottom: 15px
+        text-transform: uppercase
+        &>h3
+          margin: 0
+          &>a
+            color: $color_r
+            text-decoration: none
+            transition: color 300ms ease 0ms
+            &:hover
+              color: #610812
+      &_label
+        margin-bottom: 15px
+        padding: 0 10px
+      &_body
+        margin-bottom: 20px
+      &_footer
+        align-self: end
+        margin-bottom: 20px
+      &_amount
+        font-size: 17px
+        color: $color_r
+        margin-bottom: 10px
+        &>b
+          font-size: 20px
+
+    h2.subtitle>.h3
+      --max-font: 25
+      text-transform: uppercase
+      line-height: 1
+      margin: -15px auto 40px
+      font-weight: normal
+      text-align: center
+#section10
+  padding: 70px 0
+  .container
+    h2.subtitle.h3
+      --max-font: 25
+      text-transform: uppercase
+      line-height: 1
+      margin: -15px auto 40px
+      font-weight: normal
+      text-align: center
+  .bks_s
+    width: 100%
+    margin: 25px 0 0 0
+  .bks
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 1em
+
+    &_item
+      display: grid
+      margin-bottom: 15px
+      text-align: center
+      transition: border-color 300ms ease-in-out 0ms
+      border-radius: 6px
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+      padding: 0.5em
+      &:hover
+        border-color: $color_r
+      &_img
+        margin-bottom: 15px
+        &>a
+          &>img
+            width: 100%
+      &_name
+        line-height: 1.2
+        margin-bottom: 15px
+        text-transform: uppercase
+        &>h3
+          margin: 0
+          &>a
+            color: $color_r
+            text-decoration: none
+            transition: color 300ms ease 0ms
+            &:hover
+              color: #610812
+      &_label
+        margin-bottom: 15px
+        padding: 0 10px
+      &_body
+        margin: 0 0 1em
+        padding: 0 1em 0.5em
+        font-size: 95%
+      &_footer
+        align-self: end
+        margin-bottom: 20px
+      &_amount
+        font-size: 17px
+        color: $color_r
+        margin-bottom: 10px
+        &>b
+          font-size: 20px
+
+    h2.subtitle>.h3
+      --max-font: 25
+      text-transform: uppercase
+      line-height: 1
+      margin: -15px auto 40px
+      font-weight: normal
+      text-align: center
+
+  .radio_buttons
+    text-align: center
+    div
+      float: left
+      margin: 0 5px 20px 0
+      &:last-child label
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
+    input
+      position: absolute
+      left: -9999px
+
+    label
+      display: block
+      margin: 0 0 0 -1px
+      padding: 8px 10px
+      border: 1px solid #BBBBBB
+      background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%)
+      box-shadow: 0 2px 5px rgba(0, 0, 0, .12)
+      cursor: pointer
+      border-radius: 5px
+      color: #fff
+      &.button_all
+        background: $color_r
+      &.button_1
+        background: $color_y
+      &.button_2
+        background: $color_g
+      &.button_3
+        background: $color_b
+      &.button_4
+        background: $color_f
+
+    input:checked + label
+      background: $color_n
+      box-shadow: inset 0 3px 6px rgba(0, 0, 0, .2)
+#section11
+  max-width: 960px
+  margin: 0 auto
+  .t_content
+    &_header
+      display: grid
+      grid-template-columns: 58% 40%
+      grid-gap: 2vw
+      &_img
+        grid-column: 2/3
+        grid-row: 1/1
+        &>img
+          border-radius: 0.25rem
+          //filter: grayscale(30%)
+          margin: 1.5em 0 0 0
+      &_content
+        grid-column: 1/2
+        grid-row: 1/1
+    &_main
+      .portfolio
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(200px, 2fr))
+        grid-gap: 1vw
+        width: 100%
+        margin: 2em auto
+        .gallery-item
+          padding: 0
+          margin: 0
+          img
+            margin: 0
+            border-radius: 0.25rem
+
+
+
+  .bks_s
+    width: 100%
+    margin: 25px 0 0 0
+  .bks
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 1em
+
+    &_item
+      display: grid
+      margin-bottom: 15px
+      text-align: center
+      transition: border-color 300ms ease-in-out 0ms
+      border-radius: 15px
+      border: 4px dotted #EF7F1A
+      &:hover
+        border-color: $color_r
+      &_img
+        margin-bottom: 15px
+        &>a
+          &>img
+            width: 100%
+            border-radius: 15px 15px 0 0
+      &_name
+        line-height: 1.2
+        margin-bottom: 15px
+        text-transform: uppercase
+        &>h3
+          margin: 0
+          &>a
+            color: $color_r
+            text-decoration: none
+            transition: color 300ms ease 0ms
+            &:hover
+              color: #610812
+      &_label
+        margin-bottom: 15px
+        padding: 0 10px
+      &_body
+        margin-bottom: 20px
+      &_footer
+        align-self: end
+        margin-bottom: 20px
+      &_amount
+        font-size: 17px
+        color: $color_r
+        margin-bottom: 10px
+        &>b
+          font-size: 20px
+#section12
+  margin-bottom: 70px
+  h1.title
+    margin: 1em auto 0.5em
+  h2.subtitle
+    --max-font: 25
+    text-transform: uppercase
+    line-height: 1.2
+    margin: -10px auto 30px
+    font-weight: normal
+    text-align: center
+  .teacher_block
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr))
+    grid-gap: 1vw
+    &_item
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+      padding: 0.5em
+      border-radius: 6px
+      overflow: hidden
+      a
+        text-transform: none
+        text-decoration: none
+        &:hover
+          display: block
+          //filter: grayscale(30%)
+          img
+            transition: all 0.3s ease-in-out
+            transform: scale(1.02)
+            filter: grayscale(0)
+
+      figure
+        margin: 0
+        padding: 0
+        h3
+          margin: 0.5em auto
+          --max-font: 20
+          --min-font: 18
+          text-align: center
+        h4
+          margin: 0 auto 1em
+          --max-font: 19
+          --min-font: 17
+          text-align: center
+      img
+        margin: 0
+        //filter: grayscale(50%)
+        border-radius: 0.25rem
+        transition: all 0.3s ease-in-out
+
+#section13
+  padding: 70px 0
+  background-color: $color_bgs1
+  .prices_title
+    padding: 0 20px
+  .prices_subtitle
+    margin: 0 auto 50px
+    display: grid
+    text-align: center
+    padding: 0 20px
+  .prices_block
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr))
+    grid-gap: 1.5em
+    width: 100%
+    &_item
+      text-align: center
+      overflow: hidden
+      padding: 60px 0
+      position: relative
+      border-radius: .25rem
+      color: #fff
+      &:nth-child(1)
+        background-color: $color_y
+      &:nth-child(2)
+        background-color: $color_g
+      &:nth-child(3)
+        background-color: $color_b
+      .pop-price-tag
+        position: absolute
+        top: 45px
+        left: -80px
+        padding: 15px 70px
+        font-size: 13px
+        text-transform: uppercase
+        font-weight: 700
+        transform: rotate(-45deg)
+        background-color: $color_r
+      &_header
+        .head
+          margin: 20px auto 0
+          span.p-currency
+            font-weight: bold
+            font-size: 18px
+          span.p-rate
+            font-size: 32px
+            font-weight: bold
+          span.p-date
+            font-size: 18px
+            font-weight: 300
+            line-height: 0
+            font-style: italic
+        h3
+          font-size: 20px
+          text-transform: uppercase
+          letter-spacing: normal
+          color: inherit
+
+#section14
+  .cover
+    &_container
+      max-width: 1220px
+      width: 100%
+      height: auto
+      min-height: 700px
+      margin: 0 auto
+      display: grid
+
+      &_headline
+        align-self: end
+        justify-self: start
+        padding: 48px
+        background: #f1a733d6
+        max-width: 760px
+        border-top-left-radius: 0.125rem
+        border-top-right-radius: 0.125rem
+        h1
+          color: #fff
+          --max-font: 48
+          --min-font: 28
+          letter-spacing: normal
+          margin: 0
+          padding: 0
+          font-weight: normal
+  .two_columns
+    display: grid
+    grid-template-columns: 70% 28%
+    grid-gap: 2%
+    width: 100%
+    margin-top: 2em
+    margin-bottom: 2em
+    &_article
+      background-color: #fff
+      padding: 48px
+      justify-items: unset
+      align-items: unset
+      h2
+        margin-top: 0
+      .gallery
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(200px, 2fr))
+        margin: 1.5em auto
+        grid-gap: 0.5em
+        figure
+          display: none
+          &:nth-child(-n+6)
+            display: block
+        figure
+          margin: 0
+          padding: 0
+          overflow: hidden
+          img
+            width: 100%
+            border-radius: 0.125rem
+            margin: 0
+            transition: all 0.5s ease-out
+            &:hover
+              transform: scale(1.1)
+      .masonry
+        column-count: 3
+        margin: 1em
+        padding: 0
+        column-gap: .25em
+        display: block
+      .grid30l
+        grid-template-columns: 28% 68%
+        display: grid
+        grid-gap: 1.5em
+        align-items: center
+        justify-content: center
+        margin-top: 1em
+
+
+
+      .accordion_box
+        .closebtn
+          float: right
+          color: #fff
+          cursor: pointer
+          font-size: 1.5em
+          padding: 0 0.5em 0.5em 0.5em
+        .b_block
+          .containerTab
+            display: none
+            padding: 40px 20px 20px 20px
+            color: #fff
+            ul
+              li
+                &::before
+                  content: url(../img/icon/i_check_white.svg)!important
+            &:nth-child(1)
+              display: block
+              background: $color_g
+            &:nth-child(2)
+              background: $color_b
+            &:nth-child(3)
+              background: $color_f
+            h3
+              color: #fff
+              margin-top: 0
+        .grid_button
+          display: grid
+          grid-template-columns: 33% repeat(auto-fit, minmax(100px, 1fr))
+          .column
+            padding: 48px
+            text-align: center
+            cursor: pointer
+            color: #fff
+            &:hover
+              filter: brightness(1.2)
+              &:active:hover
+                filter: brightness(1)
+            &:active:hover:visited
+              filter: brightness(1.5)
+
+            &:nth-child(1)
+              background: $color_g
+            &:nth-child(2)
+              background: $color_b
+            &:nth-child(3)
+              background: $color_f
+
+      .accordion_list
+        width: 100%
+        background-color: #fefffa
+        margin: 2em auto
+        overflow: hidden
+
+        ul
+          list-style: none
+          padding: 0
+          margin: 0
+          li
+            position: relative
+            padding: 0
+            margin: 0
+            text-indent: 0
+            &:hover
+              filter: brightness(1.2)
+
+            &::before
+              content: ''
+              display: initial
+
+            &:nth-of-type(1)
+              animation-delay: 0.5s
+
+            &:nth-of-type(2)
+              animation-delay: 0.75s
+
+            &:nth-of-type(3)
+              animation-delay: 1s
+
+            &:last-of-type
+              padding-bottom: 0
+            i
+              position: absolute
+              transform: translate(-6px, 0)
+              margin-top: 28px
+              right: 28px
+              &:before, &:after
+                content: ""
+                position: absolute
+                background-color: $color_n
+                width: 2px
+                height: 16px
+                transition: all 0.5s ease-in-out
+              &:before
+                transform: translate(-8px, 0) rotate(45deg)
+              &:after
+                transform: translate(2px, 0) rotate(-45deg)
+
+            input[type=checkbox]
+              position: absolute
+              cursor: pointer
+              width: 100%
+              height: 100%
+              margin: 0
+              padding: 0
+              opacity: 0
+
+              &:checked ~
+                .msg
+                  margin-top: 0
+                  max-height: 0
+                  opacity: 0
+                  transform: translate(0, 50%)
+                i
+                  &:before
+                    transform: translate(8px, 0) rotate(45deg)
+
+                  &:after
+                    transform: translate(-2px, 0) rotate(-45deg)
+
+            h3
+              --min-font: 17
+              --max-font: 22
+              letter-spacing: normal
+              margin: 0
+              padding: 25px 25px 25px 15px
+              cursor: pointer
+              color: #222
+              background: $color_y
+              border-top: 1px solid #fff
+              border-bottom: 1px solid #fff
+              border-radius: 0.125rem
+              box-sizing: border-box
+              font-weight: bold
+
+
+            .msg
+              transition: all 0.5s ease-in-out
+              position: relative
+              overflow: hidden
+              opacity: 1
+              padding: 0 1em
+              img
+                width: 100%
+                height: auto
+                box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+                .large-img
+                  width: 100%
+                  margin-bottom: 10px
+
+                &.img-left
+                  width: 25%
+                  float: left
+                  margin: 5px 15px 5px 0
+
+                &.img-right
+                  width: 25%
+                  float: right
+                  margin: 5px 0 5px 15px
+
+              ul
+                line-height: 1.45
+                margin: 1em 1em 0 1.5em
+                padding: 0 15px
+
+              ul li
+                list-style: none
+                text-indent: -1em
+                margin-bottom: 1em
+
+              ul li::before
+                content: url('../img/icon/i_check.svg')
+                vertical-align: middle
+                display: inline-block
+                width: 0.65em
+
+              ol
+                line-height: 1.45
+                margin: 1em 1em 0 1.5em
+
+              ol li
+                list-style: none
+                text-indent: -2.5em
+                counter-increment: step-counter
+                margin-bottom: 1em
+
+              ol li::before
+                content: counter(step-counter)
+                margin-right: 0.75em
+                font-size: initial
+                background-color: transparent
+                color: $color_r
+                font-weight: initial
+                padding: 2px 7px
+                border-radius: unset
+                border: 1px solid #ccc
+                vertical-align: middle
+
+              .video-responsive
+                margin: 20px
+                position: relative
+                padding-bottom: 56.25%
+                height: 0
+                overflow: hidden
+                -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+                -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+                box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+                iframe, object, embed
+                  position: absolute
+                  top: 0
+                  left: 0
+                  width: 100%
+                  height: 100%
+
+
+      p
+        line-height: 1.45
+        margin-block-start: 2em
+        margin-block-end: 2em
+
+      a
+        color: #cc273b
+        text-decoration: underline
+        transition: color 300ms ease 0ms
+        &:hover
+          color: $color_r
+          text-decoration: none
+        &:focus,
+        &:active
+          color: #610812
+          text-decoration: none
+      img
+        margin: 1em auto
+        width: 100%
+        border-radius: .125rem
+
+      ul
+        line-height: 1.45
+        margin: 1em 1em 0 1.5em
+
+      ul li
+        list-style: none
+        text-indent: -1em
+        margin-bottom: 1em
+
+      ul li::before
+        content: url('../img/icon/i_check.svg')
+        vertical-align: middle
+        display: inline-block
+        width: 0.65em
+
+      ol
+        line-height: 1.45
+        margin: 1em 1em 0 1.5em
+
+      ol li
+        list-style: none
+        text-indent: -2.5em
+        counter-increment: step-counter
+        margin-bottom: 1em
+
+      ol li::before
+        content: counter(step-counter)
+        margin-right: 0.75em
+        font-size: initial
+        background-color: transparent
+        color: $color_r
+        font-weight: initial
+        padding: 2px 7px
+        border-radius: unset
+        border: 1px solid #ccc
+        vertical-align: middle
+
+
+      blockquote
+        line-height: 1.35
+        padding: 2em
+        margin: 1em 20px
+        font-style: italic
+        background: #f1f1f1
+        border-radius: 5px
+
+      .social-bar
+        margin: 20px 0
+        .social-share a
+          color: #CD5C5C
+
+    &_aside
+      &_program
+        background-color: #fff
+        padding: 48px
+        color: #333
+        margin-top: 48px
+        border-radius: 0.125rem
+        img
+          width: 100%
+          border-radius: .125rem
+        h3 a
+          color: $color_title
+          text-transform: none
+          text-decoration: none
+          &:hover
+            filter: brightness(0.85)
+        p
+          font-size: 95%
+      &_chat
+        background-color: #ffd392
+        padding: 48px
+        color: #333
+        border-radius: 0.125rem
+        h3
+          color: $color_title
+          margin: 0 0 1em 0
+        p.tell
+          background: url(../img/icon/i_tell_home.svg) no-repeat left center
+          background-size: 20px
+          padding-left: 30px
+          a
+            color: #000
+            text-decoration: none
+            transition: color 300ms ease 0ms
+            &:hover
+              background: #ffd392
+              filter: brightness(1.1)
+              padding: .25em
+        p.whatsapp
+          background: url(../img/icon/i_whatsapp.svg) no-repeat left center
+          background-size: 20px
+          padding-left: 30px
+          a
+            color: #000
+            text-decoration: none
+            transition: color 300ms ease 0ms
+            &:hover
+              background: #ffd392
+              filter: brightness(1.1)
+              padding: .25em
+        button
+          margin: 1em 0
+          border-style: outset
+          border-color: $color_r
+          border-radius: 0.25rem
+          text-transform: uppercase
+          &:hover
+            border-color: $color_y
+
+
+.container.content
+  justify-items: unset
+  align-items: unset
+
+  .gallery
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr))
+    grid-gap: 0.5rem
+    figure
+      display: none
+      &:nth-child(-n+6)
+        display: block
+    figure
+      margin: 0
+      padding: 0
+      overflow: hidden
+      img
+        width: 100%
+        height: auto
+        border-radius: 0.125rem
+        margin: 0
+        transition: all 0.5s ease-out
+        &:hover
+          transform: scale(1.1)
+
+  p
+    line-height: 1.45
+
+  a
+    color: #cc273b
+    text-decoration: underline
+    transition: color 300ms ease 0ms
+    &:hover
+      color: $color_r
+      text-decoration: none
+    &:focus,
+    &:active
+      color: #610812
+      text-decoration: none
+  img
+    margin: 1em auto
+    width: 100%
+    height: auto
+    border-radius: 0.25rem
+
+  ul
+    line-height: 1.45
+    margin: 1em 1em 0 1.5em
+
+  ul li
+    list-style: none
+    text-indent: -1em
+    margin-bottom: 1em
+
+  ul li::before
+    content: url('../img/icon/i_check.svg')
+    vertical-align: middle
+    display: inline-block
+    width: 0.65em
+
+  ol
+    line-height: 1.45
+    margin: 1em 1em 0 1.5em
+
+  ol li
+    list-style: none
+    text-indent: -2.5em
+    counter-increment: step-counter
+    margin-bottom: 1em
+
+  ol li::before
+    content: counter(step-counter)
+    margin-right: 0.75em
+    font-size: initial
+    background-color: transparent
+    color: $color_r
+    font-weight: initial
+    padding: 2px 7px
+    border-radius: 0.15rem
+    border: 1px solid rgba($color_r, 0.5)
+    vertical-align: middle
+
+
+  blockquote
+    line-height: 1.45
+    padding: 2em
+    margin: 1em 40px
+    font-style: italic
+    background: #B13D2008
+    border-radius: 5px
+
+  .social_bar
+    margin: 20px 0
+    .social_share a
+      color: #CD5C5C
+      font-size: 28px
+      margin-right: 2px
+    .social_title
+      font-size: initial
+      margin: 1rem auto
+
+footer
+  a#back-to-top
+    position: fixed
+    right: 100px
+    bottom: 1rem
+    background: rgba(194,194,194,0.51) url(../img/icon/i_top.svg) no-repeat center
+    background-size: 24px
+    width: 20px
+    height: 20px
+    border-radius: 0.25rem
+    padding: 1rem
+    z-index: 5555
+    display: block
+  .f_contact
+    margin: 0
+    padding: 70px 0 0 0
+  .f_bottom
+    background: url(../img/bg/bg5.png) repeat 0 0
+    padding: 70px 0
+    .container
+      grid-template-columns: 45% repeat(auto-fit, minmax(240px, 1fr))
+      grid-row-gap: 2.5em
+      align-items: start
+
+      .item_logo
+        filter: grayscale(50%)
+        opacity: 0.75
+
+      .item_footer
+        display: grid
+        grid-template-columns: 1fr
+        grid-gap: 1em
+        .seo
+          font-size: 14px
+          color: #888
+          a
+            font-size: 14px
+            color: #888
+            text-decoration: none
+            &:hover
+              text-decoration: underline
+        .footer_item
+          display: grid
+          justify-content: center
+          .footer_item_link
+            margin-bottom: 0.5em
+            a
+              text-decoration: none
+              color: #5b5b5b
+              &:hover
+                filter: brightness(0.5)
+                text-decoration: underline
+
+
+        .footer_title
+          text-transform: uppercase
+          font-weight: bold
+          font-size: 85%
+        .footer_contact
+          display: grid
+          grid-template-columns: 1fr
+          grid-row-gap: 1.25em
+          &_addr
+            background: url(../img/icon/i_address.svg) no-repeat left center
+            background-size: 24px
+            padding-left: 30px
+          &_tel
+            background: url(../img/icon/i_tell.svg) no-repeat left center
+            background-size: 24px
+            padding-left: 30px
+            a
+              color: #000
+              text-decoration: none
+              transition: color 300ms ease 0ms
+              &:hover
+                color: $color_r
+                text-decoration: underline
+              &:focus,
+              &:active
+                color: #610812
+                text-decoration: underline
+          &_tel_home
+            background: url(../img/icon/i_tell_home.svg) no-repeat left center
+            background-size: 24px
+            padding-left: 30px
+            a
+              color: #000
+              text-decoration: none
+              transition: color 300ms ease 0ms
+              &:hover
+                color: $color_r
+                text-decoration: underline
+              &:focus,
+              &:active
+                color: #610812
+                text-decoration: underline
+          &_mail
+            background: url(../img/icon/i_email.svg) no-repeat left center
+            background-size: 24px
+            padding-left: 30px
+            a
+              color: #000
+              text-decoration: none
+              transition: color 300ms ease 0ms
+              &:hover
+                color: $color_r
+                text-decoration: underline
+              &:focus,
+              &:active
+                color: #610812
+                text-decoration: underline
+
+
+        .footer_social
+          display: grid
+          grid-template-columns: 1fr 1fr 1fr 1fr
+          grid-gap: 0.1em
+          &_vk
+            background: url(../img/icon/i_vk.svg) no-repeat left center
+            background-size: 44px
+            vertical-align: middle
+            width: 44px
+            height: 44px
+            font-size: 0
+            &:hover
+              background: url(../img/icon/i_vk_hover.svg) no-repeat left center
+              background-size: 44px
+          &_fb
+            background: url(../img/icon/i_facebook.svg) no-repeat left center
+            background-size: 44px
+            vertical-align: middle
+            width: 44px
+            height: 44px
+            font-size: 0
+            &:hover
+              background: url(../img/icon/i_facebook_hover.svg) no-repeat left center
+              background-size: 44px
+          &_tw
+            background: url(../img/icon/i_twitter.svg) no-repeat left center
+            background-size: 44px
+            vertical-align: middle
+            width: 44px
+            height: 44px
+            font-size: 0
+            &:hover
+              background: url(../img/icon/i_twitter_hover.svg) no-repeat left center
+              background-size: 44px
+          &_in
+            background: url(../img/icon/i_instagram.svg) no-repeat left center
+            background-size: 44px
+            vertical-align: middle
+            width: 44px
+            height: 44px
+            font-size: 0
+            &:hover
+              background: url(../img/icon/i_instagram_hover.svg) no-repeat left center
+              background-size: 44px
+
+#section15
+  margin-bottom: 70px
+
+  .more_link
+    border: 1px solid #e75d5d
+    border-radius: 0.25rem
+    padding: 0 1rem
+    a
+      text-decoration: none
+      color: #E75D5D
+      display: block
+      background: url(../img/icon/i_more_link_focus.svg) no-repeat
+      background-size: 20px
+      background-position: left 50%
+      padding: 1rem
+      width: 100%
+      text-align: center
+      &:hover
+        text-decoration: underline
+
+  .ev_info
+    display: grid
+    grid-template-columns: 67% 31%
+    grid-gap: 2%
+    width: 100%
+    .grid30l
+      grid-template-columns: 28% 68%
+      display: grid
+      grid-gap: 1.5em
+      align-items: center
+      justify-content: center
+      margin-top: 1em
+    &_contaccordion_list
+      h1
+        margin: 0 auto .5em
+    &_prom
+      background: green
+      color: #fff
+      border: none
+      margin: 1em 0
+      padding: 0.5em 1.5em 1.5em
+      border-radius: 0.25rem
+      max-height: 850px
+      h3
+        color: #fff
+        --max-font: 23
+        --min-font: 18
+        letter-spacing: normal
+        text-transform: none
+
+      &.fixed
+        position: sticky
+        top: 1em
+        height: auto
+      dl
+        dt
+          font-weight: normal
+          list-style: none
+          text-transform: uppercase
+          font-size: 0.65em
+          color: #b9b9b9
+          line-height: 1.5em
+        dd
+          float: none
+          line-height: 1.5
+          list-style: none
+          margin: 0 0 10px
+          padding: 0
+          &.cost
+            font-size: 120%
+          &.categories
+            background: yellow
+            background-origin: content-box
+            padding: 0.5em!important
+            border-radius: 0.25rem
+            color: red
+            margin: 10px auto!important
+          abbr
+            text-decoration: none
+          a
+            text-decoration: none!important
+            color: inherit!important
+          address
+            font-style: normal
+          .event_gmap
+            display: block
+      .line_sub
+        max-width: 20%
+        height: 0.1em
+        background-color: #fff
+        width: 100%
+        margin: -0.5em 0 1em
+      &_btn
+        margin: 2em auto 1em
+        .btn_event
+          box-shadow: inset 0px 1px 0px 0px orange
+          background: linear-gradient(to bottom, orange 5%, orangered 100%)
+          background-color: orange
+          border-radius: 0.25rem
+          border: 1px solid orange
+          display: inline-block
+          cursor: pointer
+          color: #fff !important
+          font-size: 1em
+          font-weight: bold
+          padding: 0.75em 1.5em
+          text-decoration: none !important
+          text-transform: none
+        .btn_event:hover
+        	background: linear-gradient(to bottom, orangered 5%, orange 100%)
+        	background-color: orange
+
+        .btn_event:active
+        	position: relative
+        	top: 1px
+
+  .event_block
+    max-width: 960px
+    a.gmap_link
+      color: $color_r
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+        filter: brightness(85%)
+    &_title
+      margin: 0 auto
+      text-align: center
+    &_list
+      margin: 40px auto
+      .event_list
+        margin-bottom: 80px
+        &_date
+          display: grid
+          grid-template-columns: 1fr 1fr
+          width: 100%
+          grid-gap: 1em
+          align-items: center
+          justify-items: center
+          margin: 2em auto 1em
+          &_title
+            justify-self: start
+            margin-left: 1em
+            font-size: calc(var(--max-font) * 1px)
+            font-family: var(--h-font)
+            color: $color_r
+            text-transform: none
+            font-weight: bold
+          &_count
+            justify-self: end
+            margin-right: 1em
+        &_bks
+          display: grid
+          grid-template-columns: 1fr
+          grid-gap: 2em
+          width: 100%
+          &_item
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+            transition: border-color 300ms ease-in-out 0ms
+            border-radius: 0.25rem
+            box-shadow: 4px 5px 30px rgba(0,0,0,0.25)
+            padding: 0.5em
+            grid-column-gap: 1em
+            background-color: #FAFAFA
+            &:hover
+
+              box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+              .img
+                background-color: #000
+                img
+                  opacity: .7
+                  -ms-transform: scale(1.05,1.05)
+                  transform: scale(1.05,1.05)
+                  box-shadow: none
+                  transition-timing-function: ease-out
+                  transition-duration: 250ms
+
+            .iconify
+              vertical-align: middle
+              font-size: inherit
+              width: 20px
+              height: 20px
+              margin-right: 0.5em
+              border-radius: 100%
+              background-color: $color_r
+              padding: 2.5px
+            .header
+              overflow: hidden
+              .img
+                position: relative
+                overflow: hidden
+              img
+                width: 100%
+              time
+                position: absolute
+                bottom: -10px
+                top: 1em
+                right: 1em
+                height: 4em
+                width: 4em
+                text-align: center
+                padding: 0.5em
+                background: $color_r
+                border-radius: 0
+                text-transform: uppercase
+                color: #fff
+                line-height: normal
+                overflow: hidden
+                z-index: 9
+                span
+                  font-size: 1.5em
+                  line-height: normal
+                  font-weight: bold
+                  display: block
+              .type
+                position: absolute
+                top: 1em
+                left: 1em
+                height: 1.5em
+                width: auto
+                text-align: center
+                vertical-align: middle
+                padding: 0.5em
+                background: $color_y
+                box-shadow: 4px 5px 30px rgba(0,0,0,0.25)
+                border-radius: 0
+                text-transform: uppercase
+                color: #fff
+                line-height: normal
+                overflow: hidden
+                z-index: 9
+              .cost
+                position: absolute
+                bottom: 1em
+                right: 1em
+                height: 1.5em
+                width: auto
+                text-align: center
+                vertical-align: middle
+                padding: 0.5em
+                background: $color_r
+                border-radius: 0
+                text-transform: uppercase
+                color: #fff
+                line-height: normal
+                overflow: hidden
+                z-index: 9
+              .cost_free
+                position: absolute
+                bottom: 1em
+                right: 1em
+                height: 1.5em
+                width: auto
+                text-align: center
+                vertical-align: middle
+                padding: 0.5em
+                background: $color_g
+                border-radius: 0
+                color: #fff
+                line-height: normal
+                overflow: hidden
+                z-index: 9
+
+            .body
+              padding: 0 1em
+              .title
+                h2
+                  a
+                    color: $color_r
+                    text-decoration: none
+                    transition: color 300ms ease 0ms
+                    &:hover
+                      filter: brightness(85%)
+              .date
+                margin: 0 0 0.5em 0
+              .place
+                display: flex
+                &:before
+                  content: url(https://api.iconify.design/ic:outline-place.svg?color=%23fff&height=20)
+                  vertical-align: middle
+                  width: 20px
+                  height: 20px
+                  margin-right: 0.5em
+                  border-radius: 100%
+                  background-color: $color_r
+                  padding: 2.5px
+                  font-size: 20px
+                address
+                  font-style: normal
+              .desc
+                margin: 1em auto
+              .link
+                margin: 1em auto
+                a
+                  margin-right: 0.25em
+  .accordion_list
+    width: 100%
+    background-color: #fefffa
+    margin: 2em auto
+    overflow: hidden
+
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      li
+        position: relative
+        padding: 0
+        margin: 0
+        text-indent: 0
+        &:hover
+          filter: brightness(1.2)
+
+        &::before
+          content: ''
+          display: initial
+
+        &:nth-of-type(1)
+          animation-delay: 0.5s
+
+        &:nth-of-type(2)
+          animation-delay: 0.75s
+
+        &:nth-of-type(3)
+          animation-delay: 1s
+
+        &:last-of-type
+          padding-bottom: 0
+        i
+          position: absolute
+          transform: translate(-6px, 0)
+          margin-top: 28px
+          right: 28px
+          &:before, &:after
+            content: ""
+            position: absolute
+            background-color: $color_n
+            width: 2px
+            height: 16px
+            transition: all 0.5s ease-in-out
+          &:before
+            transform: translate(-8px, 0) rotate(45deg)
+          &:after
+            transform: translate(2px, 0) rotate(-45deg)
+
+        input[type=checkbox]
+          position: absolute
+          cursor: pointer
+          width: 100%
+          height: 100%
+          margin: 0
+          padding: 0
+          opacity: 0
+
+          &:checked ~
+            .msg
+              margin-top: 0
+              max-height: 0
+              opacity: 0
+              transform: translate(0, 50%)
+            i
+              &:before
+                transform: translate(8px, 0) rotate(45deg)
+
+              &:after
+                transform: translate(-2px, 0) rotate(-45deg)
+
+        h3
+          --min-font: 17
+          --max-font: 22
+          letter-spacing: normal
+          margin: 0
+          padding: 25px 25px 25px 15px
+          cursor: pointer
+          color: #222
+          background: $color_y
+          border-top: 1px solid #fff
+          border-bottom: 1px solid #fff
+          border-radius: 0.125rem
+          box-sizing: border-box
+          font-weight: bold
+
+
+        .msg
+          transition: all 0.5s ease-in-out
+          position: relative
+          overflow: hidden
+          opacity: 1
+          padding: 0 1em
+          h3
+            background: none
+            color: $color_r
+          img
+            width: 100%
+            height: auto
+            .large-img
+              width: 100%
+              margin-bottom: 10px
+
+            &.img-left
+              width: 25%
+              float: left
+              margin: 5px 15px 5px 0
+
+            &.img-right
+              width: 25%
+              float: right
+              margin: 5px 0 5px 15px
+
+          ul
+            line-height: 1.45
+            margin: 1em 1em 0 1.5em
+            padding: 0 15px
+
+          ul li
+            list-style: none
+            text-indent: -1em
+            margin-bottom: 1em
+
+          ul li::before
+            content: url('../img/icon/i_check.svg')
+            vertical-align: middle
+            display: inline-block
+            width: 0.65em
+
+          ol
+            line-height: 1.45
+            margin: 1em 1em 0 1.5em
+
+          ol li
+            list-style: none
+            text-indent: -2.5em
+            counter-increment: step-counter
+            margin-bottom: 1em
+
+          ol li::before
+            content: counter(step-counter)
+            margin-right: 0.75em
+            font-size: initial
+            background-color: transparent
+            color: $color_r
+            font-weight: initial
+            padding: 2px 7px
+            border-radius: unset
+            border: 1px solid #ccc
+            vertical-align: middle
+
+          .video-responsive
+            margin: 20px
+            position: relative
+            padding-bottom: 56.25%
+            height: 0
+            overflow: hidden
+            -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+            -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+            iframe, object, embed
+              position: absolute
+              top: 0
+              left: 0
+              width: 100%
+              height: 100%
+
+#section16
+  //background: url(../img/bg/bg5.png) repeat 0 0
+  padding: 70px 0
+  .title
+    line-height: normal
+    margin-bottom: 0
+    text-align: center
+    text-transform: uppercase
+    &>h2
+      margin-top: 0
+      margin-bottom: 1.2em
+  .more_link
+    border: 1px solid #e75d5d
+    border-radius: 0.25rem
+    padding: 0 1rem
+    margin: 2em 0 1em
+    a
+      text-decoration: none
+      color: #E75D5D
+      display: block
+      background: url(../img/icon/i_more_link_focus.svg) no-repeat
+      background-size: 20px
+      background-position: left 50%
+      padding: 1rem
+      width: 100%
+      text-align: center
+      &:hover
+        text-decoration: underline
+
+  .teacher_block
+    display: grid
+    width: 100%
+    grid-gap: 1em
+    &_item
+      padding: 10px
+      a
+        display: block
+        text-decoration: none
+        figure
+          margin: 0
+          border-radius: 0.25rem
+          overflow: hidden
+          img
+            border-radius: 0.25rem
+            //filter: grayscale(50%)
+            transition: all 0.3s ease-in-out
+          h3
+            font-weight: normal
+            margin-top: 0.5rem
+            margin-bottom: 0.25rem
+          h4
+            --max-font: 20
+            --min-font: 16
+            margin-top: 0.25rem
+        &:hover
+          img
+            //filter: grayscale(0)
+            transform: scale(1.02)
+          h3
+            text-decoration: underline
+
+#section17
+  padding: 70px 0
+  .gallery
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    grid-gap: 1rem
+    width: 100%
+    &_item
+      margin: 0
+      padding: 0
+      overflow: hidden
+      display: none
+      position: relative
+      &_img
+        width: 100%
+        border-radius: 0.125rem
+      &:nth-child(-n+6)
+        display: block
+      a
+        display: block
+        &:before
+          position: absolute
+          width: 32px
+          height: 28px
+          top: 40%
+          left: 50%
+          margin: -14px 0 0 -10px
+          background: url(https://wp-lessons.com/wp-content/uploads/2015/01/magnifier.png) no-repeat
+          content: ''
+          opacity: 0
+          z-index: 1
+          transition: all 0.3s linear
+        &:hover::before
+          top: 50%
+          opacity: 1
+        &:after
+          position: absolute
+          width: 100%
+          height: 100%
+          top: 0
+          background: rgba(0, 0, 0, 0.5)
+          content: ''
+          opacity: 0
+          transition: all 0.3s linear
+          display: block
+        &:hover::after
+          opacity: 1
+
+#reviews
+  .title
+    text-align: center
+  .rev_two
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+    width: 100%
+    grid-gap: 4rem
+    margin-bottom: 4rem
+    .rev
+      .btn-more
+        margin-top: 1rem
+      &_block
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(175px, 2fr))
+        grid-gap: 1rem
+        &_item
+          &:hover
+            cursor: pointer
+          &_video
+            position: relative
+            a.popup-youtube
+              display: block
+              img
+                width: 100%
+                height: auto
+              &::before
+                content: " "
+                background: url(../img/icon/i_youtube.svg) no-repeat center
+                background-color: #fff
+                border-radius: 0.35rem
+                background-size: 42px
+                width: 40px
+                height: 29px
+                position: absolute
+                top: 45%
+                left: 45%
+                opacity: 0.5
+              &:hover
+                &::before
+                  opacity: 1
+
+
+/*WhatsApp*/
+.whatsapp-nav-bottom
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  align-content: flex-end
+  width: auto
+  height: auto
+  position: fixed
+  z-index: 9999
+  bottom: 0px
+  right: 0px
+  padding: 5px
+  margin: 0px
+.whatsapp-button
+  display: flex
+  justify-content: center
+  align-content: center
+  width: 60px
+  height: 60px
+  z-index: 9999
+  transition: 0.3s
+  margin: 10px
+  padding: 7px
+  border: none
+  outline: none
+  cursor: pointer
+  border-radius: 50%
+  background-color: #fff
+  -webkit-box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705)
+  -moz-box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705)
+  box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705)
+.circle-anime
+  display: flex
+  position: absolute
+  justify-content: center
+  align-content: center
+  width: 60px
+  height: 60px
+  top: 15px
+  right: 15px
+  border-radius: 50%
+  transition: 0.3s
+  background-color: #77bb4a
+  animation: pulse 1.2s 4s ease 4
+.popup-whatsapp
+  display: none
+  position: absolute
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  width: auto
+  height: auto
+  padding: 10px
+  bottom: 85px
+  right: 6px
+  transition: 0.5s
+  border-radius: 10px
+  background-color: #fff
+  -webkit-box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705)
+  -moz-box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705)
+  box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705)
+  animation: slideInRight 0.6s 0s both
+
+  >
+    div
+      margin: 5px
+    .content-whatsapp
+      &.-top
+        display: flex
+        flex-direction: column
+        p
+          color: #585858
+          font-family: "Verdana"
+          font-weight: 400
+          font-size: 0.95em
+      &.-bottom
+        display: flex
+        flex-direction: row
+.closePopup
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 28px
+  height: 28px
+  margin: 0px 0px 15px 0px
+  border-radius: 50%
+  border: none
+  outline: none
+  cursor: pointer
+  box-shadow: 1px 1px 2px 0px rgba(68,68,68,0.705)
+  background: #f76060 url(../img/icon/i_close_white.svg) no-repeat center
+  background-size: 24px
+  font-size: 0
+
+  &:hover
+    background-color: #f71d1d
+    transition: 0.3s
+.send-msPopup
+  display: flex
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  margin: 0px 0px 0px 5px
+  border: none
+  outline: none
+  cursor: pointer
+  box-shadow: 1px 1px 2px 0px rgba(68,68,68,0.705)
+  background: #fff url(../img/icon/i_send_black.svg) no-repeat center
+  background-size: 34px
+  font-size: 0
+
+  &:hover
+    background-color: #f8f8f8
+    transition: 0.3s
+.is-active-whatsapp-popup
+  display: flex
+  animation: slideInRight 0.6s 0s both
+input.whats-input
+  &[type="text"]
+    width: 250px
+    height: 40px
+    box-sizing: border-box
+    border: 0px solid #fff
+    border-radius: 20px
+    font-size: 1em
+    background-color: #fff
+    padding: 0px 0px 0px 10px
+    -webkit-transition: width 0.3s ease-in-out
+    transition: width 0.3s ease-in-out
+    outline: none
+    transition: 0.3s
+
+  /* Most modern browsers support this now.
+
+  &::placeholder
+    color: rgba(68, 68, 68, 0.705)
+    opacity: 1
+
+  &[type="text"]:focus
+    background-color: #f8f8f8
+    -webkit-transition: width 0.3s ease-in-out
+    transition: width 0.3s ease-in-out
+    transition: 0.3s
+.icon-whatsapp-small
+  width: 24px
+  height: 24px
+.icon-whatsapp
+  width: 45px
+  height: 45px
+  margin: 0 !important
+.icon-font-color
+  color: #fff
+.icon-font-color--black
+  color: #333
+@media (max-width: 680px)
+  .popup-whatsapp p
+    font-size: 0.9em
+
+@media (max-width: 420px)
+  input.whats-input[type="text"]
+    width: 225px
+
+
+// Youtoube iframe
+.youtube
+  background-position: center
+  background-repeat: no-repeat
+  display: inline-block
+  overflow: hidden
+  transition: all 200ms ease-out
+  cursor: pointer
+  position: relative
+  margin: 1rem 0
+  .play
+    background: url('../img/icon/youtube-play-btn.png') no-repeat
+    background-position: 0 -50px
+    -webkit-background-size: 100% auto
+    background-size: 100% auto
+    position: absolute
+    height: 50px
+    width: 69px
+    transition: none
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+  &:hover .play
+    background-position: 0 0
+
+@import magnific-popup
+@import media
+@import owl-carusel
