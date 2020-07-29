@@ -427,7 +427,7 @@ header
   .navtop
     display: grid
     grid-template-columns: auto
-    justify-content: space-evenly
+    justify-content: space-between
     align-content: center
     align-items: center
     grid-gap: 1em
@@ -510,11 +510,10 @@ header
     grid-area: banner
     background: #438aff url(../img/bg/rainbow.svg) no-repeat center right
     background-size: 50%
-    min-height: 735px
+    padding: 50px 0
     position: relative
     .b_text_li
       display: flex
-      margin-bottom: 15px
       &:last-child
         margin-bottom: 0
       &:before
@@ -522,6 +521,8 @@ header
         margin-right: 15px
     .container
       grid-template-areas: "banner"
+      justify-items: flex-start
+      padding: 0 30px
       .form_header
         width: 100%
       .b_text
@@ -530,12 +531,6 @@ header
         text-shadow: 1px 0 2px rgba(0,0,0,0.15)
         align-items: center
         align-content: center
-        position: absolute
-        padding-top: 50px
-        top: 0
-        left: 20%
-        bottom: 0
-        margin: auto
         &_title
           justify-self: left
           color: white
@@ -543,9 +538,10 @@ header
           padding: 0
           margin: 0
           line-height: normal
-          font-size: var(--responsive)
           --max-font: 24
           --min-font: 18
+          font-family: "Adigiana"
+          font-size: 25px
           span
             font-weight: 700
         &_subtitle
@@ -554,21 +550,22 @@ header
           justify-self: left
           line-height: 1.1
           color: white
-          font-size: var(--responsive)
           --max-font: 42
           --min-font: 30
+          font-family: "Adigiana"
+          font-size: 40px
         &_slogan
           justify-self: left
           line-height: normal
-          font-family: var(--h-font)
           font-weight: 400
           display: grid
           color: white
-          font-size: var(--responsive)
           --max-font: 24
           --min-font: 18
+          font-family: "Adigiana"
+          font-size: 25px
         &_link
-          margin: 1em 0
+          margin-top: 1rem
 
 
 
@@ -716,7 +713,7 @@ header
         border: 4px solid $color_y
         transition: all 0.2s ease-in-out
         &:hover
-          border: 8px solid $color_y
+          //border: 8px solid $color_y
           img
             transform: scale(1.1)
             filter: brightness(85%)
@@ -725,7 +722,7 @@ header
         border: 4px solid $color_g
         transition: all 0.2s ease-in-out
         &:hover
-          border: 8px solid $color_g
+          //border: 8px solid $color_g
           img
             transform: scale(1.1)
             filter: brightness(85%)
@@ -734,7 +731,7 @@ header
         border: 4px solid $color_b
         transition: all 0.2s ease-in-out
         &:hover
-          border: 8px solid $color_b
+          //border: 8px solid $color_b
           img
             transform: scale(1.1)
             filter: brightness(85%)
@@ -743,7 +740,7 @@ header
         border: 4px solid $color_r
         transition: all 0.2s ease-in-out
         &:hover
-          border: 8px solid $color_r
+          //border: 8px solid $color_r
           img
             transform: scale(1.1)
             filter: brightness(85%)
