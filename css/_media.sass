@@ -46,9 +46,9 @@ h3.ts
             &>a
               font-size: 16px
       .social
-        grid-column: 2/3
+        grid-column: 4/5
         grid-row: 1/2
-        justify-self: start
+        justify-self: end
       .address
         grid-row: 2/3
 
@@ -104,6 +104,8 @@ h3.ts
         .inner_toogle
           display: block
           font-size: 50px
+          a svg
+            vertical-align: -0.125em
       .social
         grid-column: 3/5
         grid-row: 1/2
@@ -190,6 +192,8 @@ h3.ts
   h1,h2,h3,h4,h5,
   body
     font-size: calc(var(--min-font) * 1px)
+  .social
+    display: none
 
 @media only screen and (max-width: 1024px)
   header
