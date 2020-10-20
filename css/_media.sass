@@ -381,8 +381,11 @@ h3.ts
       grid-template-columns: repeat(2, 1fr)
 
 
-
 @media only screen and (max-width: 767px)
+  .stamp
+    display: none
+  .advantages
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr))
   header .banner2
     background-position: right bottom
   .accordion_box

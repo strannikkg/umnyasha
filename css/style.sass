@@ -554,6 +554,7 @@ header
           --min-font: 30
           font-family: "Adigiana"
           font-size: 40px
+          position: relative
         &_slogan
           justify-self: left
           line-height: normal
@@ -3163,6 +3164,40 @@ footer
     grid-area: initial
     grid-column: initial
     grid-row: initial
+
+
+
+.advantages
+  display: grid
+  grid-template-columns: repeat(auto-fill,minmax(30%,1fr))
+  grid-gap: 60px 30px
+  width: 100%
+  &__item
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+    align-items: center
+    max-width: 200px
+    margin: auto
+  &__icon
+    max-width: 100px
+    object-fit: contain
+    margin-bottom: 20px
+  &__title
+    text-align: center
+    font-size: 20px
+
+#section0
+  padding-top: 80px
+  .advantages
+    padding-top: 40px
+
+.stamp
+  position: absolute
+  left: 80%
+  top: 0
+  max-width: 200px
+  object-fit: contain
 
 
 @import magnific-popup
