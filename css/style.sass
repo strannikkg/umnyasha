@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Bad+Script&display=swap&subset=cyrillic')
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic')
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap')
+//@import url('https://fonts.googleapis.com/css?family=Bad+Script&display=swap&subset=cyrillic')
+//@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic')
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap')
 @font-face
   font-family: 'Adigiana'
   font-style: normal
@@ -23,28 +23,103 @@ $color_bgs2: #f9f8f4
 
 $color_title: $color_r
 $color_bb: #F5F5F5
-$color_tb: #222222
+$color_tb: #333
 
-body
+*
+  box-sizing: border-box
+  --main-font: 'Arial', Helvetica, sans-serif
+  --h-font: 'Arial', Helvetica, sans-serif
+  --responsive: calc((var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 320px) / (1280 - 320)))
+
+@media (min-width: 1280px)
+  h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5,p,body,
+  .btn_send, .btn_read
+    font-size: calc(var(--max-font) * 1px)!important
+
+@media (max-width: 320px)
+  h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5,p,body,
+  .btn_send, .btn_read
+    font-size: calc(var(--min-font) * 1px)!important
+
+html, body, p
   font-family: var(--main-font)
   font-size: var(--responsive)
-  font-weight: 400
-  --max-font: 18
-  --min-font: 15
+  line-height: calc(25 / 19)
+  --max-font: 20
+  --min-font: 17
+
+p
+  margin: 0 0 20px 0
+
+body
   margin: 0
   padding: 0
   color: $color_tb
   background-color: $color_bb
 
-h1,h2,h3,h4,h5,h6
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6
   font-family: var(--h-font)
   font-size: var(--responsive)
-  color: #222
+  line-height: calc(25 / 19)
+  font-weight: 600
+  color: $color_tb
   text-transform: none
-  line-height: normal
+
+h1,.h1
+  --max-font: 50
+  --min-font: 30
+
+h2,.h2
+  --max-font: 40
+  --min-font: 26
+
+h3,.h3
+  --max-font: 30
+  --min-font: 20
+
+h4,.h4
+  --max-font: 24
+  --min-font: 20
+
+h5,.h5
+  --max-font: 18
+  --min-font: 16
+
+h3.ts
+  --max-font: 22
+  --min-font: 19
+
+
 .teacher_block_item
   h1,h2,h3,h4,h5,h6
-    color: $color_b
+    color: #222
+
+a
+  &.more_link
+    text-decoration: none
+    color: $color_r
+    display: block
+    background: url(../img/icon/i_more_link_focus.svg) no-repeat left 50%
+    background-size: 20px
+    background-position-x: 1em
+    text-align: center
+    border: 1px solid $color_r
+    border-radius: 0.125rem
+    padding: 0.75em 1em
+    margin: 0 auto
+    max-width: 350px
+    width: 100%
+    transition: all 0.3s ease
+    &:hover
+      background: $color_r url(../img/icon/i_more_link_bel.svg) no-repeat left 50%
+      background-size: 20px
+      background-position-x: 1em
+      color: #fff
+
+h1
+  &.title
+    text-align: center
+
 
 figure.alignnone.entry-thumb
   margin: 0 auto
@@ -54,6 +129,13 @@ iframe
     max-width: 560px
     text-align: center
     margin: 1rem auto
+    width: 100%
+    min-height: 300px
+    @media only screen and (max-width: 480px)
+      min-height: 240px
+    @media only screen and (max-width: 360px)
+      min-height: 180px
+
 *
   outline: none
 .center
@@ -66,21 +148,30 @@ iframe
   margin-top: 0!important
 .no-margin-bottom
   margin-bottom: 0!important
+.hidesmall
+  @media (max-width: 600px)
+    display: none
 
 .container
   display: grid
-  max-width: 1160px
-  justify-items: center
+  max-width: 1280px
   align-items: center
   margin: 0 auto
-  padding: 0 15px
+  padding: 0 20px
+  &.text
+    max-width: 960px
+    text-align: justify
+  &.middle
+    max-width: 1400px
+
+
 .container2
   display: grid
   max-width: 1400px
   justify-items: center
   align-items: center
   margin: 0 auto
-  padding: 0 15px
+  padding: 0 20px
 .container3
   display: grid
   width: 100%
@@ -88,16 +179,72 @@ iframe
   justify-items: center
   align-items: center
   margin: 0 auto
+
+
 .btn
   cursor: pointer
   display: inline-block
-  font-weight: 400
+  padding: 0.75em 1em
+  font-size: var(--responsive)
+  --max-font: 16
+  --min-font: 15
   text-align: center
   vertical-align: middle
-  line-height: 1.5
-  border-radius: 0.25rem
+  border-radius: 0.125em
+  width: 100%
+  max-width: 200px
+  color: $color_r
+  background: none
+  border: 1px $color_r solid
   text-decoration: none
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+  transition: all 0.1s ease-in-out
+  &-more
+    width: 100%!important
+    display: block!important
+    margin: 1em auto 0!important
+  &:hover
+    background: $color_r
+    color: #fff
+  &_more
+    margin: 1em auto 0
+  &_default
+    background: $color_r
+    color: #fff
+    padding: 0.65em 1em
+    &:hover,
+    &:focus,
+    &:active
+      color: #fff
+      background-color: $color_y
+      border-color: $color_y
+  &_send
+    background: $color_r url(../img/icon/i_send_white.svg) calc(100% - 15px) center no-repeat
+    background-size: 34px
+    text-transform: uppercase
+    color: #fff
+    font-weight: 600
+    max-width: min-content
+    transition: all 300ms ease-in-out 0ms
+    line-height: 1.5
+    background-position-x: 230px
+    min-width: 280px
+    text-align: left
+    &:hover
+      background: darken($color_r, 10%) url(../img/icon/i_send_white.svg) calc(100% - 15px) center no-repeat
+      background-size: 34px
+
+  &_read
+    background: $color_r url(../img/icon/i_more_white.svg) center no-repeat
+    background-position-x: 20px
+    background-size: 24px
+    text-transform: uppercase
+    &:hover
+      background: $color_y url(../img/icon/i_more_white.svg) center no-repeat
+      background-position-x: 20px
+      background-size: 24px
+
+
+
 
 .btn_center
   display: block
@@ -109,21 +256,7 @@ iframe
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
 
-.btn_default
-  background-color: $color_r
-  color: #fff
-  font-size: inherit
-  padding: 13px 15px
-  border-color: inherit
 
-.btn_default
-  &:hover,
-  &:focus,
-  &:active
-    color: #fff
-    background-color: $color_y
-    border-color: $color_y
-    cursor: pointer
 
 .btn_signup
   background-color: $color_g
@@ -141,33 +274,12 @@ iframe
     border-color: $color_y
 
 
-.btn-more
-  border: #f5b9b9 1px solid
-  text-transform: uppercase
-  transition: all 300ms ease-in-out 0ms
-  width: 200px !important
 
-.btn.read_more
-  font-family: var(--h-font)
-  font-size: 15px
-  letter-spacing: 1.25px
-  background-image: url(../img/icon/i_more_white.svg)
-  background-size: 24px
-  background-position: calc(100% - 17px) center
-  background-repeat: no-repeat
-  padding: 15px 50px 15px 20px
-  text-transform: uppercase
-
-  &:hover,
-  &:focus,
-  &:active
-    background-image: url("../img/icon/i_more_white.svg")
 
 
 
 .send_button
   font-family: var(--h-font)
-  font-size: 15px
   background-image: url(../img/icon/i_send_white.svg)
   background-size: 34px
   background-position: calc(100% - 15px) center
@@ -188,269 +300,124 @@ iframe
     background-color: darken($color_r, 10%)
     border-color: darken($color_r, 10%)
 
-    //background-color: $color_y
-    //border-color: $color_y
 
-//.send_button
-  &:focus,
-  &:active,
-  &:active:hover,
-  &:active:focus,
-  &:active.focus,
-  &.active:hover,
-  &.active:focus,
-  &.active.focus
-    background-color: $color_focus
-    border-color: $color_focus
-    filter: brightness(85%)
-
-.b_send_button
-  font-family: var(--h-font)
-  font-size: var(--responsive)
-  --max-font: 13
-  --min-font: 12
-  letter-spacing: 1.5px
-  background-image: url(../img/icon/i_send_white.svg)
-  background-position: calc(100% - 15px) center
-  background-repeat: no-repeat
-  background-size: 34px
-  padding: 15px 50px 15px 20px
-  text-transform: uppercase
-  color: #fff
-  background-color: $color_r
-  border-color: $color_r
-  font-weight: bold
-  transition: all 300ms ease-in-out 0ms
-
-.b_send_button
-  &:hover
-    color: #fff
-    background-color: darken($color_r, 10%)
-    border-color: darken($color_r, 10%)
-
-.b_send_button
-  &:hover,
-  &:focus,
-  &:active
-    background-image: url("../img/icon/i_send_white.svg")
-    color: #fff
-
-.b_send_button
-  &:focus,
-  &:active,
-  &:active:hover,
-  &:active:focus,
-  &:active.focus,
-  &.active:hover,
-  &.active:focus,
-  &.active.focus
-    background-color: darken($color_r, 20%)
-    border-color: darken($color_r, 20%)
 .pt0
   padding: 0!important
+
+.ptop60
+  padding: 60px 0 0
+  @media (max-width: 768px)
+    padding: 40px 0 0
+
+
 .mt0
   margin: 0!important
 
-header
-  .nav_block
-    display: grid
-    &_top
-      .inner
-        height: 50px
-        display: grid
-        grid-template-columns: 1fr 1fr 1fr
-        align-items: center
-        justify-self: right
-        grid-gap: 1em
-        .header_text
-          display: grid
-          grid-row: 1/1
-          grid-column: 1/3
-          justify-items: center
-          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
-          grid-gap: 1em
-          &_tel
-            grid-row: 1/1
-            .icon
-              background: url(../img/icon/i_tell_home.svg) no-repeat left center
-              background-size: 20px
-              font-family: var(--main-font)
-              padding-left: 25px
-              a
-                color: #000
-                text-decoration: none
-                transition: color 300ms ease 0ms
-          &_whatsapp
-            grid-row: 1/1
-            .icon
-              background: url(../img/icon/i_whatsapp.svg) no-repeat left center
-              background-size: 22px
-              font-family: var(--main-font)
-              padding-left: 25px
-              a
-                color: #000
-                text-decoration: none
-                transition: color 300ms ease 0ms
-          &_address
-            grid-row: 1/1
-            .icon
-              background: url(../img/icon/i_address.svg) no-repeat left center
-              background-size: 22px
-              font-family: var(--main-font)
-              padding-left: 25px
-              a
-                color: #000
-                text-decoration: none
-                transition: color 300ms ease 0ms
-                border-bottom: 1px dashed currentColor
-                &:hover
-                  border-bottom: 1px solid $color_r
-          &_text
-            grid-row: 1/1
-            .icon
-              font-family: var(--main-font)
-
-
-
-        .header_social
-          display: grid
-          grid-template-columns: 1fr 1fr 1fr 1fr
-          grid-column: 3/4
-          grid-gap: 0.1em
-          grid-row: 1/1
-          justify-self: end
-          &_vk
-            background: url(../img/icon/i_vk_nobg.svg) no-repeat center
-            background-size: 24px
-            width: 40px
-            height: 40px
-            vertical-align: middle
-            font-size: 0
-            &:hover
-              background: url(../img/icon/i_vk_nobg_hover.svg) no-repeat center
-              background-size: 24px
-              background-color: #597ba0
-
-          &_fb
-            background: url(../img/icon/i_facebook_nobg.svg) no-repeat center
-            background-size: 14px
-            width: 40px
-            height: 40px
-            vertical-align: middle
-            font-size: 0
-            &:hover
-              background: url(../img/icon/i_facebook_nobg_hover.svg) no-repeat center
-              background-size: 14px
-              background-color: #4267b2
-          &_tw
-            background: url(../img/icon/i_twitter_nobg.svg) no-repeat center
-            background-size: 24px
-            width: 40px
-            height: 40px
-            vertical-align: middle
-            font-size: 0
-            &:hover
-              background: url(../img/icon/i_twitter_nobg_hover.svg) no-repeat center
-              background-size: 24px
-              background-color: #1da1f2
-          &_insta
-            background: url(../img/icon/i_instagram_nobg.svg) no-repeat center
-            background-size: 24px
-            width: 40px
-            height: 40px
-            vertical-align: middle
-            font-size: 0
-            &:hover
-              background: url(../img/icon/i_instagram_nobg_hover.svg) no-repeat center
-              background-size: 24px
-              background-color: #b900b4
-    &_line
-      .inner
-        display: grid
-        grid-template-areas: "logo nav send"
-        align-items: center
-        grid-gap: 1em
-        width: 100%
-        &_logo
-          grid-area: logo
-          justify-self: start
-          filter: grayscale(20%)
-          opacity: 0.85
-          top: -50px
-          position: relative
-          margin-bottom: -40px
-          margin-top: 10px
-          img
-            width: 100%
-        &_toogle
-          display: none
-        &_send
-          grid-area: send
-          justify-self: end
-        &_navul
-          grid-area: nav
-          z-index: 1015
-          justify-self: center
-          .close
-            display: none
-          &>ul
-            list-style: none
-            margin: 0
-            padding: 0
-            &>li
-              display: inline-grid
-              &>a
-                  line-height: normal
-                  background-color: $color_f
-                  padding: 10px 15px
-                  text-transform: uppercase
-                  text-decoration: none
-                  transition: all 300ms ease-in-out 0ms
-                  font-family: var(--h-font)
-                  font-weight: bold
-                  color: #fff
-                  font-size: 16px
-                  letter-spacing: normal
-                  margin: 5px
-                  border-radius: 0.25rem
-                  &:hover
-                    text-decoration: none
-                    color: #fff
-                    background-color: $color_r
-                  &:active,
-                  &:focus
-                    color: #fff
-                    background-color: $color_r
-                    filter: brightness(85%)
-
+.logotext
+  display: block
+  font-family: "Adigiana"
+  text-decoration: none
+  font-size: 60px
+  color: #fbca3f
+  text-shadow: 1px 1px 0px #438aff, -1px -1px 0px #438aff, 1px -1px 0px #438aff, -1px 1px 0px #438aff
 
   // NAV BLOCK 2
+header
   .navtop
     display: grid
-    grid-template-columns: auto
-    justify-content: space-between
-    align-content: center
-    align-items: center
-    grid-gap: 1em
-    padding: 20px 15px
-    .logo
+    grid-column-gap: 2em
+    grid-row-gap: 1em
+    padding: 20px
+
+    .logotext
       grid-area: logo
       grid-column: 1/2
-      grid-row: 1/2
-      max-width: 200px
-      img
-        width: 100%
-      a
-        display: block
-        img
-          width: 100%
+      grid-row: 1/3
     .nav
       grid-area: nav
       grid-column: 2/3
-      grid-row: 1/2
-      .inner_toogle
+      grid-row: 1/3
+    .social
+      grid-area: social
+      grid-column: 3/4
+      grid-row: 1/3
+    .address
+      grid-area: address
+      grid-column: 4/5
+      grid-row: 1/3
+
+    @media (max-width: 920px)
+      .logotext
+        grid-column: 1/2
+        grid-row: 1/3
+      .nav
+        grid-column: 4/5
+        grid-row: 2/3
+        justify-self: end
+      .social
+        grid-column: 3/4
+        grid-row: 1/3
+        justify-self: end
+      .address
+        grid-row: 1/3
+        grid-column: 2/3
+        justify-self: start
+
+    @media (max-width: 780px)
+      grid-column-gap: 1em
+      grid-row-gap: 0
+      padding: 0 20px
+      .logotext
+        grid-column: 1/2
+        grid-row: 1/2
+      .nav
+        grid-column: 3/5
+        grid-row: 2/3
+        justify-self: end
+      .social
+        grid-column: 3/5
+        grid-row: 1/2
+        justify-self: end
+      .address
+        grid-row: 2/3
+        grid-column: 1/4
+        justify-self: start
+
+    .nav
+      .toggle
         display: none
+      @media (max-width: 920px)
+        .toggle
+          display: block
+        #topmenu
+          transition: transform .3s ease-in-out
+          top: 0
+          bottom: 0
+          min-height: 100vh
+          position: fixed
+          width: 300px
+          left: -340px
+          background: #ab5c49
+          z-index: 111
+        #topmenu:target
+          transform: translateX(340px)
+      .inner_toogle
+        font-size: 50px
+        display: none
+        a svg
+          vertical-align: -0.125em
+        @media (max-width: 920px)
+          display: block
       .close
+        text-align: right
+        text-decoration: none
+        font-family: serif
+        font-size: 3em
+        font-weight: 300
+        color: #fff
+        position: relative
+        top: 5px
+        right: 20px
         display: none
       .navul
         ul
@@ -459,25 +426,42 @@ header
           padding: 0
           &>li
             display: inline-block
-            margin: auto 10px
+            margin: 0 20px 0 0
             &>a
               text-decoration: none
               font-size: 18px
-              color: #444
+              line-height: 1.75
+              color: $color_r
+              font-weight: bold
               &:hover
                 border-bottom: 2.5px dashed $color_r
                 color: #000
               &:active,
               &:focus
                 border-bottom: 2.5px dashed $color_r
+        @media (max-width: 920px)
+          ul
+            padding: 0 0 0 50px
+            li
+              display: block
+              margin: 20px auto
+              a
+                color: #fff
+                transition: all 0.1s
+                &:hover
+                &:active,
+                &:focus
+                  color: #fff
+                  border-bottom: 2px #fff dashed
+          .close
+            display: block
 
     .address
-      grid-area: address
-      grid-column: 4/5
-      grid-row: 1/2
       .icon_text
         font-size: small
-        text-align: right
+        font-weight: bold
+        @media (max-width: 780px)
+          display: none
       .icon_address
         background: $color_r
         padding: 8px 10px
@@ -492,18 +476,10 @@ header
           transition: all .2s linear
           &::before
             content: " "
-            background: url(../img/icon/i_address.svg) no-repeat left center
+            background: url(../img/icon/i_address_white.svg) no-repeat left center
             background-size: 20px
             font-family: var(--main-font)
             padding-left: 25px
-        //&:hover
-        //  transition: all .2s linear
-        //  background-color: #fff
-        //  border: 2px solid darken($color_r, 10%)
-        //  a
-        //    color: darken($color_r, 10%)
-
-
 
 
 
@@ -513,8 +489,15 @@ header
     background-size: 50%
     padding: 50px 0
     position: relative
+    min-height: 550px
+    @media (max-width: 1920px)
+      min-height: 550px
     .b_text_li
       display: flex
+      font-family: "Adigiana"
+      --max-font: 34
+      --min-font: 24
+      margin: 0.25em auto
       &:last-child
         margin-bottom: 0
       &:before
@@ -528,44 +511,41 @@ header
         width: 100%
       .b_text
         display: grid
-        grid-row-gap: 1em
+        grid-row-gap: 2em
         text-shadow: 1px 0 2px rgba(0,0,0,0.15)
         align-items: center
         align-content: center
+        @media (max-width: 1920px)
+          grid-row-gap: 1em
+
         &_title
           justify-self: left
           color: white
-          font-weight: 400
           padding: 0
           margin: 0
           line-height: normal
-          --max-font: 24
-          --min-font: 18
+          --max-font: 40
+          --min-font: 26
           font-family: "Adigiana"
-          font-size: 25px
           span
-            font-weight: 700
+            font-weight: 600
         &_subtitle
           padding: 0
           margin: 0
           justify-self: left
-          line-height: 1.1
+          line-height: 1.4
           color: white
-          --max-font: 42
-          --min-font: 30
+          --max-font: 28
+          --min-font: 24
           font-family: "Adigiana"
-          font-size: 40px
           position: relative
         &_slogan
           justify-self: left
-          line-height: normal
-          font-weight: 400
-          display: grid
           color: white
-          --max-font: 24
-          --min-font: 18
+          --max-font: 34
+          --min-font: 24
           font-family: "Adigiana"
-          font-size: 25px
+          margin: 0.25em 0
         &_link
           margin-top: 1rem
 
@@ -673,89 +653,134 @@ header
 #map_2gis
   width: 100%
   height: 600px
-#section1
-  padding: 70px 0
-  .bks
+
+
+.programs
+  padding: 40px 0
+  &__title
+    text-align: center
+  &__list
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
-    width: 100%
-    grid-gap: 1em
+    gap: 1em
     margin-top: 30px
-    &>a.bks_item
-        display: grid
-        margin-bottom: 15px
-        text-align: center
-        transition: border-color 300ms ease-in-out 0ms
-        box-shadow: 0 5px 20px 2px rgba(0,0,0,.15)
-        border-radius: 0.25rem
-        color: #fff
-        text-decoration: none
-        transition: color 300ms ease 0ms
-        h3
-          color: #fff
-          margin: 0
-          line-height: 1.25
-          span
-            display: block
-    .bks_item
-      &_header
-        &_img
-          margin-bottom: 1em
-          overflow: hidden
-          img
-            width: 100%
-            border-radius: .25rem .25rem 0 0
-            transition: all 0.2s ease-in-out
-        &_name
-          line-height: 1.2
-          margin-bottom: 1.2em
-          text-transform: uppercase
-      &:nth-child(1)
-        background: $color_y
-        border: 4px solid $color_y
-        transition: all 0.2s ease-in-out
-        &:hover
-          //border: 8px solid $color_y
-          img
-            transform: scale(1.1)
-            filter: brightness(85%)
-      &:nth-child(2)
+    .item
+      position: relative
+      border-radius: 0.25em
+      text-align: center
+      box-shadow: 0 5px 20px 2px rgba(0,0,0,0.15)
+      &:hover
+        img
+          transform: scale(1.1)
+          filter: brightness(85%)
+      &:nth-child(3n+1)
         background: $color_g
         border: 4px solid $color_g
-        transition: all 0.2s ease-in-out
-        &:hover
-          //border: 8px solid $color_g
-          img
-            transform: scale(1.1)
-            filter: brightness(85%)
-      &:nth-child(3)
+
+      &:nth-child(3n+2)
         background: $color_b
         border: 4px solid $color_b
-        transition: all 0.2s ease-in-out
-        &:hover
-          //border: 8px solid $color_b
-          img
-            transform: scale(1.1)
-            filter: brightness(85%)
-      &:nth-child(4)
+
+      &:nth-child(3n+3)
         background: $color_r
         border: 4px solid $color_r
-        transition: all 0.2s ease-in-out
+
+      &__img
+        overflow: hidden
+        @media (max-width: 420px)
+          width: 100%
+          max-height: 150px
+        img
+          display: block
+          width: 100%
+          transition: all 0.2s ease-in-out
+      &__title
+        span
+          display: block
+          font-size: smaller
+        a
+          display: block
+          color: #fff
+          text-decoration: none
+          &:before
+            position: absolute
+            content: ""
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+
+.services
+  .subtitle
+    margin: 0 auto 40px
+  .programs
+    &.nocolor
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-column-gap: 20px
+      grid-row-gap: 30px
+      padding: 0
+      @media (max-width: 920px)
+        grid-template-columns: repeat(2, 1fr)
+      @media (max-width: 560px)
+        grid-template-columns: repeat(1, 1fr)
+      .item
+        position: relative
+        text-align: center
+        border-radius: 0.25em
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+        padding: 0.5em 0.5em 1.5em 0.5em
         &:hover
-          //border: 8px solid $color_r
+          h3.item__title
+            color: $color_r
+          a.item__link
+            background: darken($color_r, 10%)
+            border-color: $color_r
           img
             transform: scale(1.1)
             filter: brightness(85%)
+        &__link
+          margin: 0 0 15px 0
+          font-weight: 600
+          &:before
+            position: absolute
+            content: ""
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+        &__img
+          overflow: hidden
+          @media (max-width: 420px)
+            width: 100%
+            max-height: 170px
+          img
+            display: block
+            width: 100%
+            transition: all 0.2s ease-in-out
+        &__title
+          margin: 20px 0 5px 0
+          padding: 0 15px
+        &__subtitle
+          margin: 0 0 10px
+          padding: 0 15px
+        &__text
+          padding: 0 15px
+
+
+
+
+
 #section2
-  background: linear-gradient( #fdf7e333, #fff9e461 ), url(../img/bg/bg1.jpg) repeat 0 0
   padding: 40px 0
   background-color: $color_bgs2
-  background-size: cover
+  h2
+    margin-top: 0
   .about_block
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
-    width: 100%
     grid-gap: 1em
+    justify-content: center
     &_text
       width: 100%
       margin: 0 auto
@@ -767,7 +792,7 @@ header
         width: 100%
 #section3
   background: url(../img/bg/bg5.png) repeat 0 0
-  padding: 70px 0
+  padding: 40px 0
   .title
     line-height: normal
     margin-bottom: 0
@@ -775,23 +800,6 @@ header
     text-transform: uppercase
     &>h2
       margin-top: 0
-  .more_link
-    border: 1px solid $color_r
-    border-radius: 0.25rem
-    padding: 0 1rem
-    margin: 2em 0 1em
-    a
-      text-decoration: none
-      color: $color_r
-      display: block
-      background: url(../img/icon/i_more_link_focus.svg) no-repeat
-      background-size: 20px
-      background-position: left 50%
-      padding: 1rem
-      width: 100%
-      text-align: center
-      &:hover
-        text-decoration: underline
 
   .b_rew
     display: grid
@@ -869,15 +877,10 @@ header
     text-align: center
     h2
       --max-font: 33
-      line-height: 1.15
-      text-transform: uppercase
       color: #fff
   .subtitle
     h3
-      font-family: "pf_beausans_prothin",sans-serif
       --max-font: 25
-      text-transform: uppercase
-      line-height: 1.25
       margin: 0 0 30px 0
       font-weight: normal
       color: #fff
@@ -908,7 +911,6 @@ header
       position: relative
       label
         display: block
-        font-family: var(--h-font)
         color: #fff
         background: url(../img/icon/ico_attachment_white.png)
         background-repeat: no-repeat
@@ -919,9 +921,9 @@ header
       select
         display: block
         width: 100%
-        padding: 1rem
+        padding: 1em
         border: 1px solid #ccc
-        border-radius: 0.125rem
+        border-radius: 0.125em
         font-size: inherit
         background: #d6d7da url(../img/icon/i_down.svg) no-repeat center right
         background-size: 24px
@@ -933,13 +935,11 @@ header
 
 
   input.form-control
-    height: 40px
-    font-family: var(--main-font)
     font-size: 19px
     color: #454545
     border-radius: 0
     background: #fff
-    padding: 6px 20px
+    padding: 1em
     box-shadow: none
     transition: all 300ms ease-in-out 0ms
     background-color: rgba(255, 255, 255, 0.8)
@@ -953,13 +953,14 @@ header
       color: #999
 
   textarea.form-control
-    height: 157px
+    height: 100%
+    min-height: 135px
     background-color: rgba(255,255,255,0.8)
     border-color: rgba(255,255,255,0.8)
     font-size: 19px
     color: #454545
-    border-radius: 0
-    padding: 6px 20px
+    border-radius: 0.125em
+    padding: 1em
     box-shadow: none !important
     transition: all 300ms ease-in-out 0ms
     outline: 0
@@ -985,11 +986,12 @@ header
     .form_field_doc
       label
         color: #ccc
+        font-size: smaller
       a
         color: #ccc
+        font-size: smaller
         &:hover
           text-decoration: none
-
 
   .form_chekbox
     display: grid
@@ -997,9 +999,10 @@ header
     width: 100%
     grid-gap: 2em
     margin: 20px 0
+    @media (max-width: 420px)
+      grid-template-columns: repeat(2, 1fr)
 
     &_item
-      font-size: 19px
       line-height: 1
       margin: 0
       padding: 5px 0 0 45px
@@ -1007,9 +1010,9 @@ header
 
       label
         font-weight: normal
+        cursor: pointer
 
       .checkbox label
-        font-size: 19px
         line-height: 1
         margin: 0
         padding: 5px 0 0 45px
@@ -1017,14 +1020,15 @@ header
 
       [type="checkbox"]
         display: none
-        width: 20px
-        height: 20px
+        width: 30px
+        height: 30px
 
       .checkbox_custom
-          width: 31px
-          height: 31px
+          width: 30px
+          height: 30px
           border: 1px solid #dadada
-          margin-right: 15px
+          margin-right: 12px
+          padding: 1px
           position: absolute
           top: 0
           left: 0
@@ -1043,8 +1047,8 @@ header
           border-color: #454545
           border-left: 3px solid
           border-bottom: 3px solid
-          top: 8px
-          left: 7px
+          top: 7px
+          left: 6px
           transform: rotate(-50deg)
 
       [type="checkbox"]:checked+.checkbox_custom::before
@@ -1102,10 +1106,10 @@ header
 
   .bkart
     display: grid
-    //grid-template-columns: repeat(4, 1fr)
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
-    width: 100%
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
     grid-gap: 1.25em
+    @media (max-width: 420px)
+      grid-template-columns: 1fr
 
 
     a.bkart_item
@@ -1130,7 +1134,6 @@ header
       &_link
         align-self: end
       img
-        max-height: 250px
         width: 100%
 
       &:nth-child(even)
@@ -1153,19 +1156,12 @@ header
         span.author
           padding: 0 0.5em
       &_content
-        &_title
-          font-family: var(--h-font)
-          font-size: var(--responsive)
-          line-height: 1.15
-          margin-bottom: 15px
-          color: $color_r
-          --max-font: 28
-          --min-font: 26
-          &:hover
-            color: $color_r
+        h3
+          margin: 0 0 15px 0
+          &:hover,
           &:focus,
           &:active
-            color: #610812
+            color: $color_r
         &_desc
           margin: 0 0 1em 0
     .rows.bkart
@@ -1326,81 +1322,19 @@ header
           font-size: 20px
 
     h2.subtitle>.h3
-      --max-font: 25
-      text-transform: uppercase
-      line-height: 1
       margin: -15px auto 40px
       font-weight: normal
       text-align: center
-#section10
+//#section10
   padding: 70px 0
   .container
     h2.subtitle.h3
-      --max-font: 25
-      text-transform: uppercase
-      line-height: 1
       margin: -15px auto 40px
       font-weight: normal
       text-align: center
   .bks_s
     width: 100%
     margin: 25px 0 0 0
-  .bks
-    display: grid
-    grid-template-columns: repeat(3, 1fr)
-    grid-gap: 1em
-
-    &_item
-      display: grid
-      margin-bottom: 15px
-      text-align: center
-      transition: border-color 300ms ease-in-out 0ms
-      border-radius: 6px
-      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
-      padding: 0.5em
-      &:hover
-        border-color: $color_r
-      &_img
-        margin-bottom: 15px
-        &>a
-          &>img
-            width: 100%
-      &_name
-        line-height: 1.2
-        margin-bottom: 15px
-        text-transform: uppercase
-        &>h3
-          margin: 0
-          &>a
-            color: $color_b
-            text-decoration: none
-            transition: color 300ms ease 0ms
-            &:hover
-              color: #610812
-      &_label
-        margin-bottom: 15px
-        padding: 0 10px
-      &_body
-        margin: 0 0 1em
-        padding: 0 1em 0.5em
-        font-size: 95%
-      &_footer
-        align-self: end
-        margin-bottom: 20px
-      &_amount
-        font-size: 17px
-        color: $color_r
-        margin-bottom: 10px
-        &>b
-          font-size: 20px
-
-    h2.subtitle>.h3
-      --max-font: 25
-      text-transform: uppercase
-      line-height: 1
-      margin: -15px auto 40px
-      font-weight: normal
-      text-align: center
 
   .radio_buttons
     text-align: center
@@ -1440,8 +1374,6 @@ header
       color: black
       box-shadow: inset 0 3px 6px rgba(0, 0, 0, .2)
 #section11
-  max-width: 960px
-  margin: 0 auto
   .t_content
     &_header
       display: grid
@@ -1526,9 +1458,9 @@ header
   margin-bottom: 70px
   h1.title
     margin: 1em auto 0.5em
+    text-align: center
   h2.subtitle
     --max-font: 25
-    text-transform: uppercase
     line-height: 1.2
     margin: -10px auto 30px
     font-weight: normal
@@ -1536,14 +1468,12 @@ header
   .teacher_block
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(245px, 1fr))
-    grid-gap: 1vw
+    grid-gap: 1em
     &_item
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
-      padding: 0.5em
-      border-radius: 6px
+      border-radius: 3px
       overflow: hidden
       a
-        text-transform: none
         text-decoration: none
         &:hover
           display: block
@@ -1551,21 +1481,23 @@ header
           img
             transition: all 0.3s ease-in-out
             transform: scale(1.02)
-            filter: grayscale(0)
+        img
+          border-radius: 0
 
       figure
         margin: 0
         padding: 0
+        figcaption
+          padding: 0 10px
         h3
           margin: 0.5em auto
-          --max-font: 20
-          --min-font: 18
           text-align: center
-        h4
-          margin: 0 auto 1em
           --max-font: 19
           --min-font: 17
+        h4
+          margin: 0 auto 1em
           text-align: center
+          font-weight: normal
       img
         margin: 0
         //filter: grayscale(50%)
@@ -1573,12 +1505,11 @@ header
         transition: all 0.3s ease-in-out
 
 #section13
-  padding: 70px 0
   background-color: $color_bgs1
   .prices_title
     padding: 0 20px
   .prices_subtitle
-    margin: 0 auto 50px
+    margin: 50px auto 0
     display: grid
     text-align: center
     padding: 0 20px
@@ -1595,9 +1526,9 @@ header
       border-radius: .25rem
       color: #fff
       &:nth-child(1)
-        background-color: $color_y
-      &:nth-child(2)
         background-color: $color_g
+      &:nth-child(2)
+        background-color: $color_y
       &:nth-child(3)
         background-color: $color_b
       .pop-price-tag
@@ -1625,10 +1556,11 @@ header
             line-height: 0
             font-style: italic
         h3
-          font-size: 20px
           text-transform: uppercase
           letter-spacing: normal
           color: inherit
+          --max-font: 24
+          --min-font: 20
 
 #section14
   .cover
@@ -1692,17 +1624,37 @@ header
               transform: scale(1.1)
       .masonry
         column-count: 3
-        margin: 1em
         padding: 0
         column-gap: .25em
         display: block
+
       .grid30l
         grid-template-columns: 28% 68%
         display: grid
         grid-gap: 1.5em
         align-items: center
-        justify-content: center
-        margin-top: 1em
+        border: 1px #ffc70052 solid
+        border-radius: 0.125em
+        padding: 1em
+        background: #ffc70052
+        font-weight: 600
+        @media (max-width: 480px)
+          grid-template-columns: 1fr
+          border: none
+          padding: 0
+          background: none
+
+        &_item1
+          @media (max-width: 480px)
+            border: 1px #ffc70052 solid
+            border-radius: 0.125em
+            padding: 0 1em
+            background: #ffc70052
+        &_item2
+          @media (max-width: 480px)
+            max-width: 80%
+            width: 100%
+            margin: 0 auto
 
 
 
@@ -1830,8 +1782,8 @@ header
               --min-font: 17
               --max-font: 22
               letter-spacing: normal
-              margin: 0
-              padding: 25px 25px 25px 15px
+              margin: 0.25em 0
+              padding: 20px 40px 20px 15px
               cursor: pointer
               color: #222
               background: $color_y
@@ -2017,6 +1969,8 @@ header
         padding: 48px
         color: #333
         border-radius: 0.125rem
+        position: sticky
+        top: 5px
         h3
           color: white
           margin: 0 0 1em 0
@@ -2044,14 +1998,6 @@ header
               background: #ffd392
               filter: brightness(1.1)
               padding: .25em
-        button
-          margin: 1em 0
-          border-style: outset
-          border-color: $color_r
-          border-radius: 0.25rem
-          text-transform: uppercase
-          &:hover
-            border-color: $color_y
 
 
 .container.content
@@ -2084,15 +2030,12 @@ header
 
   a
     color: #cc273b
-    text-decoration: underline
-    transition: color 300ms ease 0ms
+    text-decoration: none
     &:hover
-      color: $color_r
-      text-decoration: none
+      text-decoration: underline
     &:focus,
     &:active
       color: #610812
-      text-decoration: none
   img
     margin: 1em auto
     width: 100%
@@ -2158,16 +2101,27 @@ header
 footer
   a#back-to-top
     position: fixed
-    right: 100px
-    bottom: 1rem
-    background: rgba(194,194,194,0.51) url(../img/icon/i_top.svg) no-repeat center
-    background-size: 24px
-    width: 20px
-    height: 20px
-    border-radius: 0.25rem
-    padding: 1rem
+    right: 50%
+    left: 20px
+    bottom: 20px
+    background: rgba(244,125,153,0.45) url(../img/icon/i_top.svg) no-repeat center
+    background-size: 28px
+    width: 24px
+    height: 24px
+    border-radius: 0.125rem
+    padding: 30px
     z-index: 5555
     display: block
+    font-size: 0
+    @media (max-width: 1280px)
+      left: 15px
+      bottom: 15px
+      padding: 20px
+    @media (max-width: 420px)
+      left: 10px
+      bottom: 10px
+      padding: 20px
+
   .f_contact
     margin: 0
     padding: 70px 0 0 0
@@ -2268,71 +2222,9 @@ footer
                 color: #610812
                 text-decoration: underline
 
-
-        .footer_social
-          display: grid
-          grid-template-columns: 1fr 1fr 1fr 1fr
-          grid-gap: 0.1em
-          &_vk
-            background: url(../img/icon/i_vk.svg) no-repeat left center
-            background-size: 44px
-            vertical-align: middle
-            width: 44px
-            height: 44px
-            font-size: 0
-            &:hover
-              background: url(../img/icon/i_vk_hover.svg) no-repeat left center
-              background-size: 44px
-          &_fb
-            background: url(../img/icon/i_facebook.svg) no-repeat left center
-            background-size: 44px
-            vertical-align: middle
-            width: 44px
-            height: 44px
-            font-size: 0
-            &:hover
-              background: url(../img/icon/i_facebook_hover.svg) no-repeat left center
-              background-size: 44px
-          &_tw
-            background: url(../img/icon/i_twitter.svg) no-repeat left center
-            background-size: 44px
-            vertical-align: middle
-            width: 44px
-            height: 44px
-            font-size: 0
-            &:hover
-              background: url(../img/icon/i_twitter_hover.svg) no-repeat left center
-              background-size: 44px
-          &_in
-            background: url(../img/icon/i_instagram.svg) no-repeat left center
-            background-size: 44px
-            vertical-align: middle
-            width: 44px
-            height: 44px
-            font-size: 0
-            &:hover
-              background: url(../img/icon/i_instagram_hover.svg) no-repeat left center
-              background-size: 44px
-
 #section15
   margin-bottom: 70px
 
-  .more_link
-    border: 1px solid $color_r
-    border-radius: 0.25rem
-    padding: 0 1rem
-    a
-      text-decoration: none
-      color: $color_r
-      display: block
-      background: url(../img/icon/i_more_link_focus.svg) no-repeat
-      background-size: 20px
-      background-position: left 50%
-      padding: 1rem
-      width: 100%
-      text-align: center
-      &:hover
-        text-decoration: underline
 
   .ev_info
     display: grid
@@ -2779,38 +2671,18 @@ footer
               height: 100%
 
 #section16
-  //background: url(../img/bg/bg5.png) repeat 0 0
-  padding: 70px 0
-  .title
-    line-height: normal
-    margin-bottom: 0
+  padding: 40px 0
+  h2.title
+    margin-top: 0
+    margin-bottom: 1.2em
     text-align: center
-    text-transform: uppercase
-    &>h2
-      margin-top: 0
-      margin-bottom: 1.2em
-  .more_link
-    border: 1px solid $color_r
-    border-radius: 0.25rem
-    padding: 0 1rem
-    margin: 2em 0 1em
-    a
-      text-decoration: none
-      color: $color_r
-      display: block
-      background: url(../img/icon/i_more_link_focus.svg) no-repeat
-      background-size: 20px
-      background-position: left 50%
-      padding: 1rem
-      width: 100%
-      text-align: center
-      &:hover
-        text-decoration: underline
 
   .teacher_block
     display: grid
-    width: 100%
-    grid-gap: 1em
+    width: 95%
+    margin: 0 auto
+
+
     &_item
       padding: 10px
       a
@@ -2818,19 +2690,19 @@ footer
         text-decoration: none
         figure
           margin: 0
-          border-radius: 0.25rem
+          border-radius: 0.125rem
           overflow: hidden
           img
-            border-radius: 0.25rem
+            border-radius: 0.125rem
             //filter: grayscale(50%)
             transition: all 0.3s ease-in-out
           h3
-            font-weight: normal
             margin-top: 0.5rem
             margin-bottom: 0.25rem
+            --max-font: 19
+            --min-font: 17
           h4
-            --max-font: 20
-            --min-font: 16
+            font-weight: normal
             margin-top: 0.25rem
         &:hover
           img
@@ -2839,13 +2711,21 @@ footer
           h3
             text-decoration: underline
 
+
 #section17
-  padding: 70px 0
+  padding: 40px 0 0
   .gallery
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
-    grid-gap: 1rem
-    width: 100%
+    grid-template-columns: repeat(3, 1fr)
+    justify-content: center
+    margin: 0 auto
+    @media (max-width: 1280px)
+      grid-template-columns: repeat(2, 1fr)
+    @media (max-width: 600px)
+      grid-template-columns: 1fr
+    img
+      width: 100%
+      max-width: 1024px
     &_item
       margin: 0
       padding: 0
@@ -2859,6 +2739,7 @@ footer
         display: block
       a
         display: block
+        line-height: 0
         &:before
           position: absolute
           width: 32px
@@ -2892,13 +2773,11 @@ footer
     text-align: center
   .rev_two
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
     width: 100%
-    grid-gap: 4rem
-    margin-bottom: 4rem
+    grid-gap: 4em
+    margin-bottom: 4em
     .rev
-      .btn-more
-        margin-top: 1rem
       &_block
         display: grid
         grid-template-columns: repeat(auto-fill, minmax(175px, 2fr))
@@ -3122,12 +3001,6 @@ input.whats-input
     background-position: 0 0
 
 
-.logo-text
-  font-family: "Adigiana"
-  text-decoration: none
-  font-size: 60px
-  color: #fbca3f
-  text-shadow: 1px 1px 0px #438aff, -1px -1px 0px #438aff, 1px -1px 0px #438aff, -1px 1px 0px #438aff
 
 .social
   grid-area: social
@@ -3135,7 +3008,9 @@ input.whats-input
   grid-template-columns: 1fr 1fr 1fr 1fr
   grid-column: 3/4
   grid-row: 1/2
-  justify-self: end
+  justify-self: center
+  @media (max-width: 420px)
+    display: none
   &_vk, &_fb, &_tw, &_insta
     margin: 0 5px
     width: 30px

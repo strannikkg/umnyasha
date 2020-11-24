@@ -38,6 +38,9 @@ $(document).ready(function() {
       768: {
         items: 3
       },
+      1280: {
+        items: 4
+      },
       1400: {
         items: 5
       }
