@@ -1,0 +1,161 @@
+.whatsapp-nav-bottom
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  align-content: flex-end
+  width: auto
+  height: auto
+  position: fixed
+  z-index: 9999
+  bottom: 60px
+  right: 0px
+  padding: 5px
+  margin: 0px
+
+  .popup-whatsapp
+    display: none
+    position: absolute
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    width: auto
+    height: auto
+    padding: 10px
+    bottom: 85px
+    right: 6px
+    transition: 0.5s
+    border-radius: 10px
+    background-color: #fff
+    box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705)
+    animation: slideInRight 0.6s 0s both
+
+    &.is-active-whatsapp-popup
+      display: flex
+      animation: slideInRight 0.6s 0s both
+
+    .content-whatsapp
+      margin: 5px
+      &.top
+        display: flex
+        flex-direction: column
+        p
+          color: #585858
+          font-family: "Verdana"
+          font-weight: 400
+          font-size: 0.95em
+      &.bottom
+        display: flex
+        flex-direction: row
+
+      textarea.whats-input
+        width: 250px
+        box-sizing: border-box
+        border: 0.5px solid #c1c1c1
+        border-radius: 10px
+        font-size: 1em
+        font-family: inherit
+        background-color: #fff
+        padding: 5px 5px 5px 10px
+        transition: 0.3s
+        outline: none
+
+      .closePopup
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 28px
+        height: 28px
+        margin: 0px 0px 15px 0px
+        border-radius: 50%
+        border: none
+        outline: none
+        cursor: pointer
+        box-shadow: 1px 1px 2px 0px rgba(68,68,68,0.705)
+        background: #f76060 url(../img/svg/i_close_white.svg) no-repeat center
+        background-size: 24px
+        font-size: 0
+        &:hover
+          background-color: #f71d1d
+          transition: 0.3s
+      .send-msPopup
+        display: flex
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        margin: 0px 0px 0px 5px
+        border: none
+        outline: none
+        cursor: pointer
+        box-shadow: 1px 1px 2px 0px rgba(68,68,68,0.705)
+        background: #fff url(../img/svg/i_send_black.svg) no-repeat center
+        background-size: 34px
+        font-size: 0
+        &:hover
+          background-color: #f8f8f8
+          transition: 0.3s
+
+  .whatsapp-button
+    display: flex
+    justify-content: center
+    align-content: center
+    width: 60px
+    height: 60px
+    z-index: 9999
+    transition: 0.3s
+    margin: 10px 5px 10px 10px
+    padding: 7px
+    border: none
+    outline: none
+    cursor: pointer
+    border-radius: 50%
+    background-color: #fff
+    box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705)
+
+    .icon-whatsapp
+      width: 45px
+      height: 45px
+      margin: 0 !important
+
+  .circle-anime
+    display: flex
+    position: absolute
+    justify-content: center
+    align-content: center
+    width: 60px
+    height: 60px
+    top: 15px
+    right: 10px
+    border-radius: 50%
+    transition: 0.5s
+    background-color: #77bb4a
+    animation: pulse 1.2s 8s ease infinite
+
+    @keyframes pulse
+      0%
+        transform: scale(0.5)
+        opacity: 0
+
+      50%
+        opacity: 1
+
+      100%
+        transform: scale(1.25)
+        opacity: 0
+
+@media (max-width: 480px)
+  .whatsapp-nav-bottom
+    .popup-whatsapp
+      .content-whatsapp
+        textarea.whats-input
+          width: 230px
+
+    .whatsapp-button
+      width: 50px
+      height: 50px
+
+      .icon-whatsapp
+        width: 35px
+        height: 35px
+    .circle-anime
+      width: 50px
+      height: 50px
